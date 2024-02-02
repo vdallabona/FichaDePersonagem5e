@@ -2,123 +2,123 @@ import Link from "next/link";
 import { useParams } from 'next/navigation'
 
 export default function rotas(){
-    let numero = 0
 
     return(
         <div>
-            <div class="top-0 left-0 text-center w-60 h-4">
-                <h1 class="text-black bg-red-400">ficha de personagem</h1>
+            <div className="top-0 left-0 text-center w-60 h-4">
+                <h1 className="text-black bg-red-400">ficha de personagem</h1>
             </div>
-            <div class="container mx-auto bg-black my-3 mx-1 text-center">
-                <div class="bg-white inline-block
-                 border-2 border-red-400 my-1 border-box
+            <div className="container mx-auto my-3 text-center bg-slate-300">
+                <div className="bg-white inline-block
+                 border-2 mx-1 border-red-700 my-1 border-box
                  ">
                     <h1>Força:</h1>
-                    <input class="py-2 text-center"></input>
+                    <input className="py-2 text-center"></input>
                 </div>
-                <div class="bg-white inline-block
-                 border-2 border-red-400 my-1 border-box
+                <div className="bg-white inline-block
+                 border-2 mx-1 border-red-700 my-1 border-box
                  ">
                     <h1>Destreza:</h1>
-                    <input class="py-2 text-center"></input>
+                    <input className="py-2 text-center"></input>
                 </div>
-                <div class="bg-white inline-block
-                 border-2 border-red-400 my-1 border-box
+                <div className="bg-white inline-block
+                 border-2 mx-1 border-red-700 my-1 border-box
                  ">
                     <h1>Constituição:</h1>
-                    <input class="py-2 text-center"></input>
+                    <input className="py-2 text-center"></input>
                 </div>
-                <div class="bg-white inline-block
-                 border-2 border-red-400 my-1 border-box
+                <div className="bg-white inline-block
+                 border-2 mx-1 border-red-700 my-1 border-box
                  ">
                     <h1>Sabedoria:</h1>
-                    <input class="py-2 text-center"></input>
+                    <input className="py-2 text-center"></input>
                 </div>
-                <div class="bg-white inline-block
-                 border-2 border-red-400 my-1 border-box
+                <div className="bg-white inline-block
+                 border-2 mx-1 border-red-700 my-1 border-box
                  ">
                     <h1>Inteligência:</h1>
-                    <input class="py-2 text-center"></input>
+                    <input className="py-2 text-center"></input>
                 </div>
-                <div class="bg-white inline-block
-                 border-2 border-red-400 my-1 border-box
+                <div className="bg-white inline-block
+                 border-2 mx-1 border-red-700 my-1 border-box
                  ">
                     <h1>Carisma:</h1>
-                    <input class="py-2 text-center"></input>
+                    <input className="py-2 text-center"></input>
                 </div>
             </div>
-            <div class="container mx-auto bg-black my-4 mx-1">
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+            <div className="container mx-auto w-60 bg-slate-300 my-4 inline-block">
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
                 </div>
-                <div class="bg-white px-1 relative
-                 border-2 border-red-400 my-1 border-box
-                ">
-                    <h1 class="inline-block my-1">Habilidade:</h1>
-                    <input type="checkbox" class="mx-2 z-10 w-5"></input>
-                    <input type="checkbox" class="z-20 top-1 left-24 absolute"></input>
-                    <h1 class="inline-block mx-1">Valor do modificador</h1>
+                <div className="bg-white px-1 relative
+                    border-2 border-red-700 my-1 border-box">
+                    <h1 className="inline-block my-1">Habilidade:</h1>
+                    <input type="checkbox" className="mx-2 z-10 w-5"></input>
+                    <input type="checkbox" className="z-20 top-1 left-24 absolute"></input>
+                    <h1 className="inline-block mx-1">+8</h1>
+                </div>
+            </div>
+            <div className="container mx-auto text-center bg-slate-300 inline-block w-56">
+                <div className="border-2 mx-1 border-red-700 w-20 inline-block bg-white">
+                    <h1>CA:</h1>
+                    <h1 className="text-center">14</h1>
+                </div>
+                <div className="border-2 mx-1 border-red-700 w-32 inline-block bg-white">
+                    <h1>Max HP: 30</h1>
+                    <input className="w-20 text-center"/>
                 </div>
             </div>
         </div>
