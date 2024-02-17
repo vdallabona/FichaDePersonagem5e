@@ -2,41 +2,41 @@ import Link from "next/link";
 import { useParams } from 'next/navigation'
 
 export default function rotas(){
-    const caixaAtributo = "bg-white inline-block border-2 mx-1 border-red-700 my-1 border-box";
+    const caixaAtributo = "bg-white inline-block border-2 mx-1 border-red-700 my-1 border-box rounded  divide-y-2 divide-black";
     const caixaHabilidade = "bg-white px-1 relative border-2 border-red-700 my-1 border-box rounded";
-    const atributoInput = "py-2 text-center w-28 hover:bg-slate-200 md:w-auto";
+    const atributoInput = "py-1 text-center w-28 hover:bg-slate-200 md:w-auto rounded-full text-xl";
     return(
-        <div>
+        <div className="bg-gradient-to-tl from-red-300 to-red-900">
             <div className="top-0 left-0 text-center w-60 h-4">
                 <h1 className="text-black bg-red-400">ficha de personagem</h1>
             </div>
-            <div className="container mx-auto my-3 text-center bg-slate-300">
+            <div className="container mx-auto my-3 text-center">
                 <div className={caixaAtributo}>
-                    <h1>Força:</h1>
+                    <h1 className="md:text-lg">Força:</h1>
                     <input className={atributoInput} name="atributoFor"></input>
                 </div>
                 <div className={caixaAtributo}>
-                    <h1>Destreza:</h1>
+                    <h1 className="md:text-lg">Destreza:</h1>
                     <input className={atributoInput} name="atributoDex"></input>
                 </div>
                 <div className={caixaAtributo}>
-                    <h1>Constituição:</h1>
+                    <h1 className="md:text-lg">Constituição:</h1>
                     <input className={atributoInput} name="atributoCon"></input>
                 </div>
                 <div className={caixaAtributo}>
-                    <h1>Sabedoria:</h1>
+                    <h1 className="md:text-lg">Sabedoria:</h1>
                     <input className={atributoInput} name="atributoSab"></input>
                 </div>
                 <div className={caixaAtributo}>
-                    <h1>Inteligência:</h1>
+                    <h1 className="md:text-lg">Inteligência:</h1>
                     <input className={atributoInput} name="atributoInt"></input>
                 </div>
                 <div className={caixaAtributo}>
-                    <h1>Carisma:</h1>
+                    <h1 className="md:text-lg">Carisma:</h1>
                     <input className={atributoInput} name="atributoCar"></input>
                 </div>
             </div>
-            <div className="flex flex-wrap mx-auto bg-slate-300 w-fit">
+            <div className="flex flex-wrap mx-auto w-fit">
                 <div className="w-56 mx-auto">
                     <div className={caixaHabilidade}>
                         <h1 className="inline-block my-1">Acrobatics:</h1>
@@ -183,19 +183,24 @@ export default function rotas(){
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto my-auto p-3">
+                <div className="mx-auto px-2 my-auto">
+                    <div className="border-2 mx-auto border-red-700 w-28 bg-white rounded-full top-0 relative my-4 md:my-10">
+                            <h1 className="text-center">Bônus de Proeficiência:</h1>
+                            <h1 className="text-center text-2xl">+3</h1>
+                    </div>
                     <div className="text-center mx-auto my-auto w-48 py-3 md:py-10">
                         <div className="border-2 mx-auto border-red-700 w-16 bg-white rounded-full">
-                            <h1 className="text-xl">AC:</h1>
+                            <h1 className="text-xl">CA:</h1>
                             <h1 className="text-lg">14</h1>
                         </div>
-                        <div className="mx-auto border-2 border-red-700 w-32 my-1 bg-white rounded-md">
-                            <h1 className="text-lg">PV max: 30</h1>
-                            <input className="w-20 text-center hover:bg-slate-200" type="number" name="VidaAtual"/>
+                        <div className="mx-auto border-2 border-red-700 w-32 mt-4 bg-white rounded-md divide-y-2 divide-slate-300 divide-dashed">
+                            <h1 className="text-xl w-20 inline-block">PV</h1>
+                            <h1 className="text-lg w-20 inline-block">max: 30</h1>
+                            <input className="w-20 text-center hover:bg-slate-200" placeholder="PV atual" name="VidaAtual"/>
                         </div>
                     </div>
-                    <div className="bg-slate-300 mx-auto w-48 my-auto">
-                        <p className="text-black text-center text-2xl">Salvaguarda</p>
+                    <div className="mx-auto w-48 md:my-10">
+                        <p className="text-black text-center text-2xl mt-2 md:mt-5">Salvaguarda</p>
                         <div className={caixaHabilidade}>
                             <h1 className="inline-block my-1">Força:</h1>
                             <div className="inline-block float-right my-1">
@@ -241,7 +246,16 @@ export default function rotas(){
                     </div>
                 </div>
             </div>
-
+            <div className="container mx-auto text-center">
+                <div className="bg-white border-2 border-red-700 m-2 border-box w-56 xl:w-60 xl:h-46 inline-block rounded">
+                        <h1 className="md:text-lg text-center">Habilidades de Classe:</h1>
+                        <textarea className="p-2 w-48 xl:w-56 xl:h-36 bg-slate-100 rounded" name="habilidadesDeClasse"/>
+                </div>
+                <div className="bg-white border-2 border-red-700 m-2 border-box w-56 xl:w-60 xl:h-46 inline-block rounded">
+                        <h1 className="md:text-lg text-center">Outras Habilidades:</h1>
+                        <textarea className="p-2 w-48 xl:w-56 xl:h-36 bg-slate-100 rounded" name="outrasHabilidades"/>
+                </div>
+            </div>
 {/*
             <div className="flex flex-wrap h-56 w-96 bg-slate-500 content-center justify-around">
                 <div className="flex flex-wrap container bg-slate-50 h-40 w-60 justify-center content-center">
@@ -258,6 +272,7 @@ export default function rotas(){
                 </div>
             </div>
 */}
+            <footer className="invisible">Vinícius Liberato Cidral Dallabona</footer>
         </div>
     )
 }
