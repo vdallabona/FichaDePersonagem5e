@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.caixaAtributo {
+    @apply shadow-md bg-white inline-block border-2 mx-1 border-lago my-1 rounded  divide-y-2 divide-black
+}
+
+.caixaHabilidade {
+    @apply shadow-md bg-white px-1 relative border-2 border-lago my-1 rounded
+}
+
+.atributoInput {
+    @apply outline-none py-1 text-center w-28 hover:bg-blue-100 md:w-auto rounded-full text-xl
+}
