@@ -78,6 +78,261 @@ export default function rotas(){
          furtHabilidade = dexNumb
        }
 
+       const [habProefAds, setHabProefAds] = useState(false);
+       const [habExperAds, setHabExperAds] = useState(false);
+       const handleProefAds = (event) => {
+          setHabProefAds(event.target.checked)
+       }
+       const handleExperAds = (event) => {
+           setHabExperAds(event.target.checked)
+        }
+        let adsHabilidade = sabNumb
+        if(habExperAds == true){
+          adsHabilidade = proef * 2 + sabNumb
+        }else if(habProefAds){
+          adsHabilidade = sabNumb + proef
+        }else{
+          adsHabilidade = sabNumb
+        }
+
+        const [habProefIntu, setHabProefIntu] = useState(false);
+        const [habExperIntu, setHabExperIntu] = useState(false);
+        const handleProefIntu = (event) => {
+           setHabProefIntu(event.target.checked)
+        }
+        const handleExperIntu = (event) => {
+            setHabExperIntu(event.target.checked)
+         }
+         let intuHabilidade = sabNumb
+         if(habExperIntu == true){
+           intuHabilidade = proef * 2 + sabNumb
+         }else if(habProefIntu){
+           intuHabilidade = sabNumb + proef
+         }else{
+           intuHabilidade = sabNumb
+         }
+
+        const [habProefMeds, setHabProefMeds] = useState(false);
+        const [habExperMeds, setHabExperMeds] = useState(false);
+        const handleProefMeds = (event) => {
+           setHabProefMeds(event.target.checked)
+        }
+        const handleExperMeds = (event) => {
+            setHabExperMeds(event.target.checked)
+         }
+         let medsHabilidade = sabNumb
+         if(habExperMeds == true){
+           medsHabilidade = proef * 2 + sabNumb
+         }else if(habProefMeds){
+           medsHabilidade = sabNumb + proef
+         }else{
+           medsHabilidade = sabNumb
+         }
+
+        const [habProefPerc, setHabProefPerc] = useState(false);
+        const [habExperPerc, setHabExperPerc] = useState(false);
+        const handleProefPerc = (event) => {
+           setHabProefPerc(event.target.checked)
+        }
+        const handleExperPerc = (event) => {
+            setHabExperPerc(event.target.checked)
+         }
+         let percHabilidade = sabNumb
+         if(habExperPerc == true){
+           percHabilidade = proef * 2 + sabNumb
+         }else if(habProefPerc){
+           percHabilidade = sabNumb + proef
+         }else{
+           percHabilidade = sabNumb
+         }
+
+        const [habProefSobr, setHabProefSobr] = useState(false);
+        const [habExperSobr, setHabExperSobr] = useState(false);
+        const handleProefSobr = (event) => {
+           setHabProefSobr(event.target.checked)
+        }
+        const handleExperSobr = (event) => {
+            setHabExperSobr(event.target.checked)
+         }
+         let sobrHabilidade = sabNumb
+         if(habExperSobr == true){
+           sobrHabilidade = proef * 2 + sabNumb
+         }else if(habProefSobr){
+           sobrHabilidade = sabNumb + proef
+         }else{
+           sobrHabilidade = sabNumb
+         }
+
+        const [habProefArc, setHabProefArc] = useState(false);
+        const [habExperArc, setHabExperArc] = useState(false);
+        const handleProefArc = (event) => {
+           setHabProefArc(event.target.checked)
+        }
+        const handleExperArc = (event) => {
+            setHabExperArc(event.target.checked)
+         }
+         let arcHabilidade = intNumb
+         if(habExperArc == true){
+           arcHabilidade = proef * 2 + intNumb
+         }else if(habProefArc){
+           arcHabilidade = intNumb + proef
+         }else{
+           arcHabilidade = intNumb
+         }
+
+        const [habProefHist, setHabProefHist] = useState(false);
+        const [habExperHist, setHabExperHist] = useState(false);
+        const handleProefHist = (event) => {
+           setHabProefHist(event.target.checked)
+        }
+        const handleExperHist = (event) => {
+            setHabExperHist(event.target.checked)
+         }
+         let histHabilidade = intNumb
+         if(habExperHist == true){
+           histHabilidade = proef * 2 + intNumb
+         }else if(habProefHist){
+           histHabilidade = intNumb + proef
+         }else{
+           histHabilidade = intNumb
+         }
+
+        const [habProefInv, setHabProefInv] = useState(false);
+        const [habExperInv, setHabExperInv] = useState(false);
+        const handleProefInv = (event) => {
+           setHabProefInv(event.target.checked)
+        }
+        const handleExperInv = (event) => {
+            setHabExperInv(event.target.checked)
+         }
+         let invHabilidade = intNumb
+         if(habExperInv == true){
+           invHabilidade = proef * 2 + intNumb
+         }else if(habProefInv){
+           invHabilidade = intNumb + proef
+         }else{
+           invHabilidade = intNumb
+         }
+
+        const [habProefNat, setHabProefNat] = useState(false);
+        const [habExperNat, setHabExperNat] = useState(false);
+        const handleProefNat = (event) => {
+            setHabProefNat(event.target.checked)
+        }
+        const handleExperNat = (event) => {
+            setHabExperNat(event.target.checked)
+        }
+        let natHabilidade = intNumb
+        if(habExperNat == true){
+            natHabilidade = proef * 2 + intNumb
+        }else if(habProefNat){
+            natHabilidade = intNumb + proef
+        }else{
+            natHabilidade = intNumb
+        }
+
+        const [habProefRel, setHabProefRel] = useState(false);
+        const [habExperRel, setHabExperRel] = useState(false);
+        const handleProefRel = (event) => {
+            setHabProefRel(event.target.checked)
+        }
+        const handleExperRel = (event) => {
+            setHabExperRel(event.target.checked)
+        }
+        let relHabilidade = intNumb
+        if(habExperRel == true){
+            relHabilidade = proef * 2 + intNumb
+        }else if(habProefRel){
+            relHabilidade = intNumb + proef
+        }else{
+            relHabilidade = intNumb
+        }
+
+        const [habProefAtl, setHabProefAtl] = useState(false);
+        const [habExperAtl, setHabExperAtl] = useState(false);
+        const handleProefAtl = (event) => {
+            setHabProefAtl(event.target.checked)
+        }
+        const handleExperAtl = (event) => {
+            setHabExperAtl(event.target.checked)
+        }
+        let atlHabilidade = forcNumb
+        if(habExperAtl == true){
+            atlHabilidade = proef * 2 + forcNumb
+        }else if(habProefAtl){
+            atlHabilidade = forcNumb + proef
+        }else{
+            atlHabilidade = forcNumb
+        }
+
+        const [habProefEnga, setHabProefEnga] = useState(false);
+        const [habExperEnga, setHabExperEnga] = useState(false);
+        const handleProefEnga = (event) => {
+            setHabProefEnga(event.target.checked)
+        }
+        const handleExperEnga = (event) => {
+            setHabExperEnga(event.target.checked)
+        }
+        let engaHabilidade = carNumb
+        if(habExperEnga == true){
+            engaHabilidade = proef * 2 + carNumb
+        }else if(habProefEnga){
+            engaHabilidade = carNumb + proef
+        }else{
+            engaHabilidade = carNumb
+        }
+
+        const [habProefInti, setHabProefInti] = useState(false);
+        const [habExperInti, setHabExperInti] = useState(false);
+        const handleProefInti = (event) => {
+            setHabProefInti(event.target.checked)
+        }
+        const handleExperInti = (event) => {
+            setHabExperInti(event.target.checked)
+        }
+        let intiHabilidade = carNumb
+        if(habExperInti == true){
+            intiHabilidade = proef * 2 + carNumb
+        }else if(habProefInti){
+            intiHabilidade = carNumb + proef
+        }else{
+            intiHabilidade = carNumb
+        }
+
+        const [habProefPerf, setHabProefPerf] = useState(false);
+        const [habExperPerf, setHabExperPerf] = useState(false);
+        const handleProefPerf = (event) => {
+            setHabProefPerf(event.target.checked)
+        }
+        const handleExperPerf = (event) => {
+            setHabExperPerf(event.target.checked)
+        }
+        let perfHabilidade = carNumb
+        if(habExperPerf == true){
+            perfHabilidade = proef * 2 + carNumb
+        }else if(habProefPerf){
+            perfHabilidade = carNumb + proef
+        }else{
+            perfHabilidade = carNumb
+        }
+
+        const [habProefPers, setHabProefPers] = useState(false);
+        const [habExperPers, setHabExperPers] = useState(false);
+        const handleProefPers = (event) => {
+            setHabProefPers(event.target.checked)
+        }
+        const handleExperPers = (event) => {
+            setHabExperPers(event.target.checked)
+        }
+        let persHabilidade = carNumb
+        if(habExperPers == true){
+            persHabilidade = proef * 2 + carNumb
+        }else if(habProefPers){
+            persHabilidade = carNumb + proef
+        }else{
+            persHabilidade = carNumb
+        }
+
     return(
         <div className="bg-gradient-radial from-red-300 to-red-900 bg-fixed">
             <div className="top-0 left-0 text-center w-60 h-4">
@@ -144,113 +399,169 @@ export default function rotas(){
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Animal Handling:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefAds"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpAds"></input>
-                            <h1 className="inline-block mx-1">+{sabNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAds"
+                            onChange={handleExperAds}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAds"
+                            onChange={handleProefAds}/>
+                            <h1 className="inline-block mx-1">+
+                            {adsHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Arcana:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefArc"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpArc"></input>
-                            <h1 className="inline-block mx-1">+{intNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefArc"
+                            onChange={handleExperArc}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpArc"
+                            onChange={handleProefArc}/>
+                            <h1 className="inline-block mx-1">+
+                            {arcHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Athletics:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefAtl"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpAtl"></input>
-                            <h1 className="inline-block mx-1">+{forcNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAtl"
+                            onChange={handleExperAtl}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAtl"
+                            onChange={handleProefAtl}/>
+                            <h1 className="inline-block mx-1">+
+                            {atlHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Deception:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefEng"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpEng"></input>
-                            <h1 className="inline-block mx-1">+{carNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefEnga"
+                            onChange={handleExperEnga}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpEnga"
+                            onChange={handleProefEnga}/>
+                            <h1 className="inline-block mx-1">+
+                            {engaHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">History:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefHist"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpHist"></input>
-                            <h1 className="inline-block mx-1">+{intNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefHist"
+                            onChange={handleExperHist}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpHist"
+                            onChange={handleProefHist}/>
+                            <h1 className="inline-block mx-1">+
+                            {histHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Insight:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefIntu"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpIntu"></input>
-                            <h1 className="inline-block mx-1">+{sabNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefIntu"
+                            onChange={handleExperIntu}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpIntu"
+                            onChange={handleProefIntu}/>
+                            <h1 className="inline-block mx-1">+
+                            {intuHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Intimidation:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefInti"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpInti"></input>
-                            <h1 className="inline-block mx-1">+{carNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefInti"
+                            onChange={handleExperInti}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpInti"
+                            onChange={handleProefInti}/>
+                            <h1 className="inline-block mx-1">+
+                            {intiHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Investigation:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefInv"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpInv"></input>
-                            <h1 className="inline-block mx-1">+{intNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefInv"
+                            onChange={handleExperInv}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpInv"
+                            onChange={handleProefInv}/>
+                            <h1 className="inline-block mx-1">+
+                            {invHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Medicine:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefMed"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpMed"></input>
-                            <h1 className="inline-block mx-1">+{sabNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefMeds"
+                            onChange={handleExperMeds}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpMeds"
+                            onChange={handleProefMeds}/>
+                            <h1 className="inline-block mx-1">+
+                            {medsHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Nature:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefNat"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpNat"></input>
-                            <h1 className="inline-block mx-1">+{intNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefNat"
+                            onChange={handleExperNat}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpNat"
+                            onChange={handleProefNat}/>
+                            <h1 className="inline-block mx-1">+
+                            {natHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Perception:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefPerc"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpPerc"></input>
-                            <h1 className="inline-block mx-1">+{sabNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPerc"
+                            onChange={handleExperPerc}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPerc"
+                            onChange={handleProefPerc}/>
+                            <h1 className="inline-block mx-1">+
+                            {percHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Performance:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefAtu"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpAtu"></input>
-                            <h1 className="inline-block mx-1">+{carNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPerf"
+                            onChange={handleExperPerf}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPerf"
+                            onChange={handleProefPerf}/>
+                            <h1 className="inline-block mx-1">+
+                            {perfHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Persuasion:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefPers"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpPers"></input>
-                            <h1 className="inline-block mx-1">+{carNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPers"
+                            onChange={handleExperPers}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPers"
+                            onChange={handleProefPers}/>
+                            <h1 className="inline-block mx-1">+
+                            {persHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Religion:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefRel"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpRel"></input>
-                            <h1 className="inline-block mx-1">+{intNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefRel"
+                            onChange={handleExperRel}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpRel"
+                            onChange={handleProefRel}/>
+                            <h1 className="inline-block mx-1">+
+                            {relHabilidade}
+                            </h1>
                         </div>
                     </div>
                     <div className="caixaHabilidade">
@@ -258,7 +569,7 @@ export default function rotas(){
                         <div className="inline-block float-right my-1">
                         <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPres"
                             onChange={handleExperPres}/>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAcro"
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPres"
                             onChange={handleProefPres}/>
                             <h1 className="inline-block mx-1">+
                             {presdigitacaoHabilidade}
@@ -268,9 +579,9 @@ export default function rotas(){
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Stealth:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPres"
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefFurt"
                             onChange={handleExperFurt}/>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAcro"
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpFurt"
                             onChange={handleProefFurt}/>
                             <h1 className="inline-block mx-1">+
                             {furtHabilidade}
@@ -280,9 +591,13 @@ export default function rotas(){
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Survival:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer'name="habProefSobr"></input>
-                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer'name="habExpSobr"></input>
-                            <h1 className="inline-block mx-1">+{sabNumb + proef}</h1>
+                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefSobr"
+                            onChange={handleExperSobr}/>
+                            <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpSobr"
+                            onChange={handleProefSobr}/>
+                            <h1 className="inline-block mx-1">+
+                            {sobrHabilidade}
+                            </h1>
                         </div>
                     </div>
                 </div>
