@@ -15,7 +15,8 @@ export default function rotas(){
     const [int, setInt] = useState(0)
     const [car, setCar] = useState(0)
 
-    let proef = 3;
+    let proef = 2;
+    let Armadura = 10;
 
     //transforma as strings (forc, dex, etc...) em numbers
     let forcNumb = forc * 1
@@ -43,295 +44,361 @@ export default function rotas(){
      }
 
 
-     const [habProefPres, setHabProefPres] = useState(false);
-     const [habExperPres, setHabExperPres] = useState(false);
-     const handleProefPres = (event) => {
-        setHabProefPres(event.target.checked)
-     }
-     const handleExperPres = (event) => {
-         setHabExperPres(event.target.checked)
-      }
-      let presdigitacaoHabilidade = dexNumb
-      if(habExperPres == true){
-        presdigitacaoHabilidade = proef * 2 + dexNumb
-      }else if(habProefPres){
-        presdigitacaoHabilidade = dexNumb + proef
-      }else{
-        presdigitacaoHabilidade = dexNumb
-      }
+    const [habProefPres, setHabProefPres] = useState(false);
+    const [habExperPres, setHabExperPres] = useState(false);
+    const handleProefPres = (event) => {
+    setHabProefPres(event.target.checked)
+    }
+    const handleExperPres = (event) => {
+        setHabExperPres(event.target.checked)
+    }
+    let presdigitacaoHabilidade = dexNumb
+    if(habExperPres == true){
+    presdigitacaoHabilidade = proef * 2 + dexNumb
+    }else if(habProefPres){
+    presdigitacaoHabilidade = dexNumb + proef
+    }else{
+    presdigitacaoHabilidade = dexNumb
+    }
 
 
-      const [habProefFurt, setHabProefFurt] = useState(false);
-      const [habExperFurt, setHabExperFurt] = useState(false);
-      const handleProefFurt = (event) => {
-         setHabProefFurt(event.target.checked)
-      }
-      const handleExperFurt = (event) => {
-          setHabExperFurt(event.target.checked)
-       }
-       let furtHabilidade = dexNumb
-       if(habExperFurt == true){
-         furtHabilidade = proef * 2 + dexNumb
-       }else if(habProefFurt){
-         furtHabilidade = dexNumb + proef
-       }else{
-         furtHabilidade = dexNumb
-       }
+    const [habProefFurt, setHabProefFurt] = useState(false);
+    const [habExperFurt, setHabExperFurt] = useState(false);
+    const handleProefFurt = (event) => {
+        setHabProefFurt(event.target.checked)
+    }
+    const handleExperFurt = (event) => {
+        setHabExperFurt(event.target.checked)
+    }
+    let furtHabilidade = dexNumb
+    if(habExperFurt == true){
+        furtHabilidade = proef * 2 + dexNumb
+    }else if(habProefFurt){
+        furtHabilidade = dexNumb + proef
+    }else{
+        furtHabilidade = dexNumb
+    }
 
-       const [habProefAds, setHabProefAds] = useState(false);
-       const [habExperAds, setHabExperAds] = useState(false);
-       const handleProefAds = (event) => {
-          setHabProefAds(event.target.checked)
-       }
-       const handleExperAds = (event) => {
-           setHabExperAds(event.target.checked)
+    const [habProefAds, setHabProefAds] = useState(false);
+    const [habExperAds, setHabExperAds] = useState(false);
+    const handleProefAds = (event) => {
+        setHabProefAds(event.target.checked)
+    }
+    const handleExperAds = (event) => {
+        setHabExperAds(event.target.checked)
+    }
+    let adsHabilidade = sabNumb
+    if(habExperAds == true){
+        adsHabilidade = proef * 2 + sabNumb
+    }else if(habProefAds){
+        adsHabilidade = sabNumb + proef
+    }else{
+        adsHabilidade = sabNumb
+    }
+
+    const [habProefIntu, setHabProefIntu] = useState(false);
+    const [habExperIntu, setHabExperIntu] = useState(false);
+    const handleProefIntu = (event) => {
+        setHabProefIntu(event.target.checked)
+    }
+    const handleExperIntu = (event) => {
+        setHabExperIntu(event.target.checked)
         }
-        let adsHabilidade = sabNumb
-        if(habExperAds == true){
-          adsHabilidade = proef * 2 + sabNumb
-        }else if(habProefAds){
-          adsHabilidade = sabNumb + proef
+        let intuHabilidade = sabNumb
+        if(habExperIntu == true){
+        intuHabilidade = proef * 2 + sabNumb
+        }else if(habProefIntu){
+        intuHabilidade = sabNumb + proef
         }else{
-          adsHabilidade = sabNumb
+        intuHabilidade = sabNumb
         }
 
-        const [habProefIntu, setHabProefIntu] = useState(false);
-        const [habExperIntu, setHabExperIntu] = useState(false);
-        const handleProefIntu = (event) => {
-           setHabProefIntu(event.target.checked)
+    const [habProefMeds, setHabProefMeds] = useState(false);
+    const [habExperMeds, setHabExperMeds] = useState(false);
+    const handleProefMeds = (event) => {
+        setHabProefMeds(event.target.checked)
+    }
+    const handleExperMeds = (event) => {
+        setHabExperMeds(event.target.checked)
         }
-        const handleExperIntu = (event) => {
-            setHabExperIntu(event.target.checked)
-         }
-         let intuHabilidade = sabNumb
-         if(habExperIntu == true){
-           intuHabilidade = proef * 2 + sabNumb
-         }else if(habProefIntu){
-           intuHabilidade = sabNumb + proef
-         }else{
-           intuHabilidade = sabNumb
-         }
-
-        const [habProefMeds, setHabProefMeds] = useState(false);
-        const [habExperMeds, setHabExperMeds] = useState(false);
-        const handleProefMeds = (event) => {
-           setHabProefMeds(event.target.checked)
-        }
-        const handleExperMeds = (event) => {
-            setHabExperMeds(event.target.checked)
-         }
-         let medsHabilidade = sabNumb
-         if(habExperMeds == true){
-           medsHabilidade = proef * 2 + sabNumb
-         }else if(habProefMeds){
-           medsHabilidade = sabNumb + proef
-         }else{
-           medsHabilidade = sabNumb
-         }
-
-        const [habProefPerc, setHabProefPerc] = useState(false);
-        const [habExperPerc, setHabExperPerc] = useState(false);
-        const handleProefPerc = (event) => {
-           setHabProefPerc(event.target.checked)
-        }
-        const handleExperPerc = (event) => {
-            setHabExperPerc(event.target.checked)
-         }
-         let percHabilidade = sabNumb
-         if(habExperPerc == true){
-           percHabilidade = proef * 2 + sabNumb
-         }else if(habProefPerc){
-           percHabilidade = sabNumb + proef
-         }else{
-           percHabilidade = sabNumb
-         }
-
-        const [habProefSobr, setHabProefSobr] = useState(false);
-        const [habExperSobr, setHabExperSobr] = useState(false);
-        const handleProefSobr = (event) => {
-           setHabProefSobr(event.target.checked)
-        }
-        const handleExperSobr = (event) => {
-            setHabExperSobr(event.target.checked)
-         }
-         let sobrHabilidade = sabNumb
-         if(habExperSobr == true){
-           sobrHabilidade = proef * 2 + sabNumb
-         }else if(habProefSobr){
-           sobrHabilidade = sabNumb + proef
-         }else{
-           sobrHabilidade = sabNumb
-         }
-
-        const [habProefArc, setHabProefArc] = useState(false);
-        const [habExperArc, setHabExperArc] = useState(false);
-        const handleProefArc = (event) => {
-           setHabProefArc(event.target.checked)
-        }
-        const handleExperArc = (event) => {
-            setHabExperArc(event.target.checked)
-         }
-         let arcHabilidade = intNumb
-         if(habExperArc == true){
-           arcHabilidade = proef * 2 + intNumb
-         }else if(habProefArc){
-           arcHabilidade = intNumb + proef
-         }else{
-           arcHabilidade = intNumb
-         }
-
-        const [habProefHist, setHabProefHist] = useState(false);
-        const [habExperHist, setHabExperHist] = useState(false);
-        const handleProefHist = (event) => {
-           setHabProefHist(event.target.checked)
-        }
-        const handleExperHist = (event) => {
-            setHabExperHist(event.target.checked)
-         }
-         let histHabilidade = intNumb
-         if(habExperHist == true){
-           histHabilidade = proef * 2 + intNumb
-         }else if(habProefHist){
-           histHabilidade = intNumb + proef
-         }else{
-           histHabilidade = intNumb
-         }
-
-        const [habProefInv, setHabProefInv] = useState(false);
-        const [habExperInv, setHabExperInv] = useState(false);
-        const handleProefInv = (event) => {
-           setHabProefInv(event.target.checked)
-        }
-        const handleExperInv = (event) => {
-            setHabExperInv(event.target.checked)
-         }
-         let invHabilidade = intNumb
-         if(habExperInv == true){
-           invHabilidade = proef * 2 + intNumb
-         }else if(habProefInv){
-           invHabilidade = intNumb + proef
-         }else{
-           invHabilidade = intNumb
-         }
-
-        const [habProefNat, setHabProefNat] = useState(false);
-        const [habExperNat, setHabExperNat] = useState(false);
-        const handleProefNat = (event) => {
-            setHabProefNat(event.target.checked)
-        }
-        const handleExperNat = (event) => {
-            setHabExperNat(event.target.checked)
-        }
-        let natHabilidade = intNumb
-        if(habExperNat == true){
-            natHabilidade = proef * 2 + intNumb
-        }else if(habProefNat){
-            natHabilidade = intNumb + proef
+        let medsHabilidade = sabNumb
+        if(habExperMeds == true){
+        medsHabilidade = proef * 2 + sabNumb
+        }else if(habProefMeds){
+        medsHabilidade = sabNumb + proef
         }else{
-            natHabilidade = intNumb
+        medsHabilidade = sabNumb
         }
 
-        const [habProefRel, setHabProefRel] = useState(false);
-        const [habExperRel, setHabExperRel] = useState(false);
-        const handleProefRel = (event) => {
-            setHabProefRel(event.target.checked)
+    const [habProefPerc, setHabProefPerc] = useState(false);
+    const [habExperPerc, setHabExperPerc] = useState(false);
+    const handleProefPerc = (event) => {
+        setHabProefPerc(event.target.checked)
+    }
+    const handleExperPerc = (event) => {
+        setHabExperPerc(event.target.checked)
         }
-        const handleExperRel = (event) => {
-            setHabExperRel(event.target.checked)
-        }
-        let relHabilidade = intNumb
-        if(habExperRel == true){
-            relHabilidade = proef * 2 + intNumb
-        }else if(habProefRel){
-            relHabilidade = intNumb + proef
+        let percHabilidade = sabNumb
+        if(habExperPerc == true){
+        percHabilidade = proef * 2 + sabNumb
+        }else if(habProefPerc){
+        percHabilidade = sabNumb + proef
         }else{
-            relHabilidade = intNumb
+        percHabilidade = sabNumb
         }
 
-        const [habProefAtl, setHabProefAtl] = useState(false);
-        const [habExperAtl, setHabExperAtl] = useState(false);
-        const handleProefAtl = (event) => {
-            setHabProefAtl(event.target.checked)
+    const [habProefSobr, setHabProefSobr] = useState(false);
+    const [habExperSobr, setHabExperSobr] = useState(false);
+    const handleProefSobr = (event) => {
+        setHabProefSobr(event.target.checked)
+    }
+    const handleExperSobr = (event) => {
+        setHabExperSobr(event.target.checked)
         }
-        const handleExperAtl = (event) => {
-            setHabExperAtl(event.target.checked)
-        }
-        let atlHabilidade = forcNumb
-        if(habExperAtl == true){
-            atlHabilidade = proef * 2 + forcNumb
-        }else if(habProefAtl){
-            atlHabilidade = forcNumb + proef
+        let sobrHabilidade = sabNumb
+        if(habExperSobr == true){
+        sobrHabilidade = proef * 2 + sabNumb
+        }else if(habProefSobr){
+        sobrHabilidade = sabNumb + proef
         }else{
-            atlHabilidade = forcNumb
+        sobrHabilidade = sabNumb
         }
 
-        const [habProefEnga, setHabProefEnga] = useState(false);
-        const [habExperEnga, setHabExperEnga] = useState(false);
-        const handleProefEnga = (event) => {
-            setHabProefEnga(event.target.checked)
+    const [habProefArc, setHabProefArc] = useState(false);
+    const [habExperArc, setHabExperArc] = useState(false);
+    const handleProefArc = (event) => {
+        setHabProefArc(event.target.checked)
+    }
+    const handleExperArc = (event) => {
+        setHabExperArc(event.target.checked)
         }
-        const handleExperEnga = (event) => {
-            setHabExperEnga(event.target.checked)
-        }
-        let engaHabilidade = carNumb
-        if(habExperEnga == true){
-            engaHabilidade = proef * 2 + carNumb
-        }else if(habProefEnga){
-            engaHabilidade = carNumb + proef
+        let arcHabilidade = intNumb
+        if(habExperArc == true){
+        arcHabilidade = proef * 2 + intNumb
+        }else if(habProefArc){
+        arcHabilidade = intNumb + proef
         }else{
-            engaHabilidade = carNumb
+        arcHabilidade = intNumb
         }
 
-        const [habProefInti, setHabProefInti] = useState(false);
-        const [habExperInti, setHabExperInti] = useState(false);
-        const handleProefInti = (event) => {
-            setHabProefInti(event.target.checked)
+    const [habProefHist, setHabProefHist] = useState(false);
+    const [habExperHist, setHabExperHist] = useState(false);
+    const handleProefHist = (event) => {
+        setHabProefHist(event.target.checked)
+    }
+    const handleExperHist = (event) => {
+        setHabExperHist(event.target.checked)
         }
-        const handleExperInti = (event) => {
-            setHabExperInti(event.target.checked)
-        }
-        let intiHabilidade = carNumb
-        if(habExperInti == true){
-            intiHabilidade = proef * 2 + carNumb
-        }else if(habProefInti){
-            intiHabilidade = carNumb + proef
+        let histHabilidade = intNumb
+        if(habExperHist == true){
+        histHabilidade = proef * 2 + intNumb
+        }else if(habProefHist){
+        histHabilidade = intNumb + proef
         }else{
-            intiHabilidade = carNumb
+        histHabilidade = intNumb
         }
 
-        const [habProefPerf, setHabProefPerf] = useState(false);
-        const [habExperPerf, setHabExperPerf] = useState(false);
-        const handleProefPerf = (event) => {
-            setHabProefPerf(event.target.checked)
+    const [habProefInv, setHabProefInv] = useState(false);
+    const [habExperInv, setHabExperInv] = useState(false);
+    const handleProefInv = (event) => {
+        setHabProefInv(event.target.checked)
+    }
+    const handleExperInv = (event) => {
+        setHabExperInv(event.target.checked)
         }
-        const handleExperPerf = (event) => {
-            setHabExperPerf(event.target.checked)
-        }
-        let perfHabilidade = carNumb
-        if(habExperPerf == true){
-            perfHabilidade = proef * 2 + carNumb
-        }else if(habProefPerf){
-            perfHabilidade = carNumb + proef
+        let invHabilidade = intNumb
+        if(habExperInv == true){
+        invHabilidade = proef * 2 + intNumb
+        }else if(habProefInv){
+        invHabilidade = intNumb + proef
         }else{
-            perfHabilidade = carNumb
+        invHabilidade = intNumb
         }
 
-        const [habProefPers, setHabProefPers] = useState(false);
-        const [habExperPers, setHabExperPers] = useState(false);
-        const handleProefPers = (event) => {
-            setHabProefPers(event.target.checked)
-        }
-        const handleExperPers = (event) => {
-            setHabExperPers(event.target.checked)
-        }
-        let persHabilidade = carNumb
-        if(habExperPers == true){
-            persHabilidade = proef * 2 + carNumb
-        }else if(habProefPers){
-            persHabilidade = carNumb + proef
-        }else{
-            persHabilidade = carNumb
-        }
+    const [habProefNat, setHabProefNat] = useState(false);
+    const [habExperNat, setHabExperNat] = useState(false);
+    const handleProefNat = (event) => {
+        setHabProefNat(event.target.checked)
+    }
+    const handleExperNat = (event) => {
+        setHabExperNat(event.target.checked)
+    }
+    let natHabilidade = intNumb
+    if(habExperNat == true){
+        natHabilidade = proef * 2 + intNumb
+    }else if(habProefNat){
+        natHabilidade = intNumb + proef
+    }else{
+        natHabilidade = intNumb
+    }
+
+    const [habProefRel, setHabProefRel] = useState(false);
+    const [habExperRel, setHabExperRel] = useState(false);
+    const handleProefRel = (event) => {
+        setHabProefRel(event.target.checked)
+    }
+    const handleExperRel = (event) => {
+        setHabExperRel(event.target.checked)
+    }
+    let relHabilidade = intNumb
+    if(habExperRel == true){
+        relHabilidade = proef * 2 + intNumb
+    }else if(habProefRel){
+        relHabilidade = intNumb + proef
+    }else{
+        relHabilidade = intNumb
+    }
+
+    const [habProefAtl, setHabProefAtl] = useState(false);
+    const [habExperAtl, setHabExperAtl] = useState(false);
+    const handleProefAtl = (event) => {
+        setHabProefAtl(event.target.checked)
+    }
+    const handleExperAtl = (event) => {
+        setHabExperAtl(event.target.checked)
+    }
+    let atlHabilidade = forcNumb
+    if(habExperAtl == true){
+        atlHabilidade = proef * 2 + forcNumb
+    }else if(habProefAtl){
+        atlHabilidade = forcNumb + proef
+    }else{
+        atlHabilidade = forcNumb
+    }
+
+    const [habProefEnga, setHabProefEnga] = useState(false);
+    const [habExperEnga, setHabExperEnga] = useState(false);
+    const handleProefEnga = (event) => {
+        setHabProefEnga(event.target.checked)
+    }
+    const handleExperEnga = (event) => {
+        setHabExperEnga(event.target.checked)
+    }
+    let engaHabilidade = carNumb
+    if(habExperEnga == true){
+        engaHabilidade = proef * 2 + carNumb
+    }else if(habProefEnga){
+        engaHabilidade = carNumb + proef
+    }else{
+        engaHabilidade = carNumb
+    }
+
+    const [habProefInti, setHabProefInti] = useState(false);
+    const [habExperInti, setHabExperInti] = useState(false);
+    const handleProefInti = (event) => {
+        setHabProefInti(event.target.checked)
+    }
+    const handleExperInti = (event) => {
+        setHabExperInti(event.target.checked)
+    }
+    let intiHabilidade = carNumb
+    if(habExperInti == true){
+        intiHabilidade = proef * 2 + carNumb
+    }else if(habProefInti){
+        intiHabilidade = carNumb + proef
+    }else{
+        intiHabilidade = carNumb
+    }
+
+    const [habProefPerf, setHabProefPerf] = useState(false);
+    const [habExperPerf, setHabExperPerf] = useState(false);
+    const handleProefPerf = (event) => {
+        setHabProefPerf(event.target.checked)
+    }
+    const handleExperPerf = (event) => {
+        setHabExperPerf(event.target.checked)
+    }
+    let perfHabilidade = carNumb
+    if(habExperPerf == true){
+        perfHabilidade = proef * 2 + carNumb
+    }else if(habProefPerf){
+        perfHabilidade = carNumb + proef
+    }else{
+        perfHabilidade = carNumb
+    }
+
+    const [habProefPers, setHabProefPers] = useState(false);
+    const [habExperPers, setHabExperPers] = useState(false);
+    const handleProefPers = (event) => {
+        setHabProefPers(event.target.checked)
+    }
+    const handleExperPers = (event) => {
+        setHabExperPers(event.target.checked)
+    }
+    let persHabilidade = carNumb
+    if(habExperPers == true){
+        persHabilidade = proef * 2 + carNumb
+    }else if(habProefPers){
+        persHabilidade = carNumb + proef
+    }else{
+        persHabilidade = carNumb
+    }
+
+    const [saveProefForc, setsaveProefForc] = useState(false);
+    const handlesaveForc = (event) => {
+        setsaveProefForc(event.target.checked)
+    }
+    let forcSave = forcNumb
+    if(saveProefForc){
+        forcSave = forcNumb + proef
+    }else{
+        forcSave = forcNumb
+    }
+
+    const [saveProefDex, setsaveProefDex] = useState(false);
+    const handlesaveDex = (event) => {
+        setsaveProefDex(event.target.checked)
+    }
+    let dexSave = dexNumb
+    if(saveProefDex){
+        dexSave = dexNumb + proef
+    }else{
+        dexSave = dexNumb
+    }
+
+    const [saveProefCon, setsaveProefCon] = useState(false);
+    const handlesaveCon = (event) => {
+        setsaveProefCon(event.target.checked)
+    }
+    let conSave = conNumb
+    if(saveProefCon){
+        conSave = conNumb + proef
+    }else{
+        conSave = conNumb
+    }
+
+    const [saveProefSab, setsaveProefSab] = useState(false);
+    const handlesaveSab = (event) => {
+        setsaveProefSab(event.target.checked)
+    }
+    let sabSave = sabNumb
+    if(saveProefSab){
+        sabSave = sabNumb + proef
+    }else{
+        sabSave = sabNumb
+    }
+
+    const [saveProefInt, setsaveProefInt] = useState(false);
+    const handlesaveInt = (event) => {
+        setsaveProefInt(event.target.checked)
+    }
+    let intSave = intNumb
+    if(saveProefInt){
+        intSave = intNumb + proef
+    }else{
+        intSave = intNumb
+    }
+
+    const [saveProefCar, setsaveProefCar] = useState(false);
+    const handlesaveCar = (event) => {
+        setsaveProefCar(event.target.checked)
+    }
+    let carSave = carNumb
+    if(saveProefCar){
+        carSave = carNumb + proef
+    }else{
+        carSave = carNumb
+    }
 
     return(
         <div className="bg-gradient-radial from-red-300 to-red-900 bg-fixed">
@@ -609,7 +676,7 @@ export default function rotas(){
                     <div className="text-center mx-auto my-auto w-48 py-3 md:py-10">
                         <div className="shadow-md border-2 mx-auto border-lago w-16 bg-white rounded-full">
                             <h1 className="text-xl">CA:</h1>
-                            <h1 className="text-lg">14</h1>
+                            <h1 className="text-lg">{Armadura + dexNumb}</h1>
                         </div>
                         <div className="shadow-md mx-auto border-2 border-lago w-32 mt-4 bg-white rounded-md divide-y-2 divide-slate-300 divide-dashed">
                             <h1 className="text-xl w-20 inline-block">PV</h1>
@@ -622,43 +689,61 @@ export default function rotas(){
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Força:</h1>
                             <div className="inline-block float-right my-1">
-                                <input type="checkbox"  className="cursor-pointer" name="SalvFor"></input>
-                                <h1 className="inline-block mx-1">+{forcNumb + proef}</h1>
+                                <input type='checkbox' className='cursor-pointer' name="SalvFor"
+                                onChange={handlesaveForc}/>
+                                <h1 className="inline-block mx-1">+
+                                {forcSave}
+                                </h1>
                             </div>
                         </div>
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Destreza:</h1>
                             <div className="inline-block float-right my-1">
-                                <input type="checkbox"  className="cursor-pointer" name="SalvDes"></input>
-                                <h1 className="inline-block mx-1">+{dexNumb + proef}</h1>
+                                <input type='checkbox' className='cursor-pointer' name="SalvDex"
+                                onChange={handlesaveDex}/>
+                                <h1 className="inline-block mx-1">+
+                                {dexSave}
+                                </h1>
                             </div>
                         </div>
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Constituição:</h1>
                             <div className="inline-block float-right my-1">
-                                <input type="checkbox"  className="cursor-pointer" name="SalvCon"></input>
-                                <h1 className="inline-block mx-1">+{conNumb + proef}</h1>
+                                <input type='checkbox' className='cursor-pointer' name="SalvCon"
+                                onChange={handlesaveCon}/>
+                                <h1 className="inline-block mx-1">+
+                                {conSave}
+                                </h1>
                             </div>
                         </div>
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Sabedoria:</h1>
                             <div className="inline-block float-right my-1">
-                                <input type="checkbox"  className="cursor-pointer" name="SalvSab"></input>
-                                <h1 className="inline-block mx-1">+{sabNumb + proef}</h1>
+                                <input type='checkbox' className='cursor-pointer' name="SalvSab"
+                                onChange={handlesaveSab}/>
+                                <h1 className="inline-block mx-1">+
+                                {sabSave}
+                                </h1>
                             </div>
                         </div>
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Inteligência:</h1>
                             <div className="inline-block float-right my-1">
-                                <input type="checkbox"  className="cursor-pointer" name="SalvInt"></input>
-                                <h1 className="inline-block mx-1">+{intNumb + proef}</h1>
+                                <input type='checkbox' className='cursor-pointer' name="SalvInt"
+                                onChange={handlesaveInt}/>
+                                <h1 className="inline-block mx-1">+
+                                {intSave}
+                                </h1>
                             </div>
                         </div>
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Carisma:</h1>
                             <div className="inline-block float-right my-1">
-                                <input type="checkbox"  className="cursor-pointer" name="SalvCar"></input>
-                                <h1 className="inline-block mx-1">+{carNumb + proef}</h1>
+                                <input type='checkbox' className='cursor-pointer' name="SalvCar"
+                                onChange={handlesaveCar}/>
+                                <h1 className="inline-block mx-1">+
+                                {carSave}
+                                </h1>
                             </div>
                         </div>
                     </div>
@@ -674,22 +759,6 @@ export default function rotas(){
                         <textarea className="bg-blue-50 rounded resize-none" rows="8" cols="40" name="outrasHabilidades"/>
                 </div>
             </div>
-{/*
-            <div className="flex flex-wrap h-56 w-96 bg-slate-500 content-center justify-around">
-                <div className="flex flex-wrap container bg-slate-50 h-40 w-60 justify-center content-center">
-                    <p className="text-red-700 p-2 m-2">1</p>
-                    <p className="text-blue-700 p-2 m-2">2</p>
-                    <p className="text-red-700 p-2 m-2">3</p>
-                    <p className="text-blue-700 p-2 m-2">4</p>
-                </div>
-                <div className="flex flex-wrap h-10 w-10 bg-slate-900 content-around justify-around">
-                <div className="h-4 w-4 bg-slate-700"/>
-                <div className="h-4 w-4 bg-slate-700"/>
-                <div className="h-4 w-4 bg-slate-700"/>
-                <div className="h-4 w-4 bg-slate-700"/>
-                </div>
-            </div>
-*/}
             <footer className="invisible h-40">Vinícius Liberato Cidral Dallabona</footer>
         </div>
     )
