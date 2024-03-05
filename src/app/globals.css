@@ -13,3 +13,13 @@
 .atributoInput {
     @apply outline-none py-1 text-center w-28 hover:bg-blue-100 md:w-auto rounded-full text-xl
 }
+
+@layer base {
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield !important;
+    }
+ }

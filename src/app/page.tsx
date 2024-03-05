@@ -8,23 +8,24 @@ import { useState } from "react"
 
 export default function rotas(){
 
-    const [forc, setFor] = useState(0)
-    const [dex, setDex] = useState(0)
-    const [con, setCon] = useState(0)
-    const [sab, setSab] = useState(0)
-    const [int, setInt] = useState(0)
-    const [car, setCar] = useState(0)
+    const [forc, setFor] = useState(10)
+    const [dex, setDex] = useState(10)
+    const [con, setCon] = useState(10)
+    const [sab, setSab] = useState(10)
+    const [int, setInt] = useState(10)
+    const [car, setCar] = useState(10)
 
-    let proef = 2;
+    const [proefNumber, setProefNumber] = useState(2)
+    let proef = proefNumber * 1
     let Armadura = 10;
 
-    //transforma as strings (forc, dex, etc...) em numbers
-    let forcNumb = forc * 1
-    let dexNumb = dex * 1
-    let conNumb = con * 1
-    let sabNumb = sab * 1
-    let intNumb = int * 1
-    let carNumb = car * 1
+    //formula para calcular modificadores de atributo do DnD (com arredondamento)
+    let forcNumb = Math.floor((forc - 10) / 2)
+    let dexNumb = Math.floor((dex - 10) / 2)
+    let conNumb = Math.floor((con - 10) / 2)
+    let sabNumb = Math.floor((sab - 10) / 2)
+    let intNumb = Math.floor((int - 10) / 2)
+    let carNumb = Math.floor((car - 10) / 2)
 
     const [habProef, setHabProef] = useState(false);
     const [habExper, setHabExper] = useState(false);
@@ -408,43 +409,42 @@ export default function rotas(){
             <div className="container mx-auto my-3 text-center">
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Força:</h1>
-                    <input className="atributoInput" name="atributoFor"
-                    required
-                    onChange={(e) => setFor(e.target.value)}
-                    />
+                    <input className="atributoInput" name="atributoFor" placeholder="10"
+                    required type="number"
+                    onChange={(e) => setFor(e.target.value)}/>
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Destreza:</h1>
-                    <input className="atributoInput" name="atributoDex"
+                    <input className="atributoInput" name="atributoDex" placeholder="10"
                     required
                     onChange={(e) => setDex(e.target.value)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Constituição:</h1>
-                    <input className="atributoInput" name="atributoCon"
-                    required
+                    <input className="atributoInput" name="atributoCon" placeholder="10"
+                    required type="number"
                     onChange={(e) => setCon(e.target.value)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Sabedoria:</h1>
-                    <input className="atributoInput" name="atributoSab"
-                    required
+                    <input className="atributoInput" name="atributoSab" placeholder="10"
+                    required type="number"
                     onChange={(e) => setSab(e.target.value)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Inteligência:</h1>
-                    <input className="atributoInput" name="atributoInt"
-                    required
+                    <input className="atributoInput" name="atributoInt" placeholder="10"
+                    required type="number"
                     onChange={(e) => setInt(e.target.value)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Carisma:</h1>
-                    <input className="atributoInput" name="atributoCar"
-                    required
+                    <input className="atributoInput" name="atributoCar" placeholder="10"
+                    required type="number"
                     onChange={(e) => setCar(e.target.value)}
                     />
                 </div>
@@ -458,7 +458,7 @@ export default function rotas(){
                             onChange={handleExper}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAcro"
                             onChange={handleProef}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {acrobaciaHabilidade}
                             </h1>
                         </div>
@@ -470,7 +470,7 @@ export default function rotas(){
                             onChange={handleExperAds}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAds"
                             onChange={handleProefAds}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {adsHabilidade}
                             </h1>
                         </div>
@@ -482,7 +482,7 @@ export default function rotas(){
                             onChange={handleExperArc}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpArc"
                             onChange={handleProefArc}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {arcHabilidade}
                             </h1>
                         </div>
@@ -494,7 +494,7 @@ export default function rotas(){
                             onChange={handleExperAtl}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAtl"
                             onChange={handleProefAtl}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {atlHabilidade}
                             </h1>
                         </div>
@@ -506,7 +506,7 @@ export default function rotas(){
                             onChange={handleExperEnga}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpEnga"
                             onChange={handleProefEnga}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {engaHabilidade}
                             </h1>
                         </div>
@@ -518,7 +518,7 @@ export default function rotas(){
                             onChange={handleExperHist}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpHist"
                             onChange={handleProefHist}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {histHabilidade}
                             </h1>
                         </div>
@@ -530,7 +530,7 @@ export default function rotas(){
                             onChange={handleExperIntu}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpIntu"
                             onChange={handleProefIntu}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {intuHabilidade}
                             </h1>
                         </div>
@@ -542,7 +542,7 @@ export default function rotas(){
                             onChange={handleExperInti}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpInti"
                             onChange={handleProefInti}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {intiHabilidade}
                             </h1>
                         </div>
@@ -554,7 +554,7 @@ export default function rotas(){
                             onChange={handleExperInv}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpInv"
                             onChange={handleProefInv}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {invHabilidade}
                             </h1>
                         </div>
@@ -566,7 +566,7 @@ export default function rotas(){
                             onChange={handleExperMeds}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpMeds"
                             onChange={handleProefMeds}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {medsHabilidade}
                             </h1>
                         </div>
@@ -578,7 +578,7 @@ export default function rotas(){
                             onChange={handleExperNat}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpNat"
                             onChange={handleProefNat}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {natHabilidade}
                             </h1>
                         </div>
@@ -590,7 +590,7 @@ export default function rotas(){
                             onChange={handleExperPerc}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPerc"
                             onChange={handleProefPerc}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {percHabilidade}
                             </h1>
                         </div>
@@ -602,7 +602,7 @@ export default function rotas(){
                             onChange={handleExperPerf}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPerf"
                             onChange={handleProefPerf}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {perfHabilidade}
                             </h1>
                         </div>
@@ -614,7 +614,7 @@ export default function rotas(){
                             onChange={handleExperPers}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPers"
                             onChange={handleProefPers}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {persHabilidade}
                             </h1>
                         </div>
@@ -626,7 +626,7 @@ export default function rotas(){
                             onChange={handleExperRel}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpRel"
                             onChange={handleProefRel}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {relHabilidade}
                             </h1>
                         </div>
@@ -638,7 +638,7 @@ export default function rotas(){
                             onChange={handleExperPres}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPres"
                             onChange={handleProefPres}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {presdigitacaoHabilidade}
                             </h1>
                         </div>
@@ -650,7 +650,7 @@ export default function rotas(){
                             onChange={handleExperFurt}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpFurt"
                             onChange={handleProefFurt}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {furtHabilidade}
                             </h1>
                         </div>
@@ -662,16 +662,17 @@ export default function rotas(){
                             onChange={handleExperSobr}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpSobr"
                             onChange={handleProefSobr}/>
-                            <h1 className="inline-block mx-1">+
+                            <h1 className="inline-block mx-1 w-5 text-right">
                             {sobrHabilidade}
                             </h1>
                         </div>
                     </div>
                 </div>
-                <div className="mx-auto px-2 my-auto">
-                    <div className="shadow-md border-2 mx-auto border-lago w-28 bg-white rounded-full top-0 relative my-4 md:my-10">
-                            <h1 className="text-center">Bônus de Proeficiência:</h1>
-                            <h1 className="text-center text-2xl">+{proef}</h1>
+                <div className="mx-auto px-2">
+                    <div className="shadow-md border-2 mx-auto border-lago w-28 bg-white rounded-full top-0 relative my-4 md:my-10 text-center">
+                            <h1>Bônus de Proeficiência:</h1>
+                            <input type="number" className="outline-none w-12 h-6 text-center hover:bg-slate-200 mx-auto rounded-full" name="proef" placeholder="2"
+                            onChange={(e) => setProefNumber(e.target.value)}/>
                     </div>
                     <div className="text-center mx-auto my-auto w-48 py-3 md:py-10">
                         <div className="shadow-md border-2 mx-auto border-lago w-16 bg-white rounded-full">
@@ -691,7 +692,7 @@ export default function rotas(){
                             <div className="inline-block float-right my-1">
                                 <input type='checkbox' className='cursor-pointer' name="SalvFor"
                                 onChange={handlesaveForc}/>
-                                <h1 className="inline-block mx-1">+
+                                <h1 className="inline-block mx-1 w-5 text-right">
                                 {forcSave}
                                 </h1>
                             </div>
@@ -701,7 +702,7 @@ export default function rotas(){
                             <div className="inline-block float-right my-1">
                                 <input type='checkbox' className='cursor-pointer' name="SalvDex"
                                 onChange={handlesaveDex}/>
-                                <h1 className="inline-block mx-1">+
+                                <h1 className="inline-block mx-1 w-5 text-right">
                                 {dexSave}
                                 </h1>
                             </div>
@@ -711,7 +712,7 @@ export default function rotas(){
                             <div className="inline-block float-right my-1">
                                 <input type='checkbox' className='cursor-pointer' name="SalvCon"
                                 onChange={handlesaveCon}/>
-                                <h1 className="inline-block mx-1">+
+                                <h1 className="inline-block mx-1 w-5 text-right">
                                 {conSave}
                                 </h1>
                             </div>
@@ -721,7 +722,7 @@ export default function rotas(){
                             <div className="inline-block float-right my-1">
                                 <input type='checkbox' className='cursor-pointer' name="SalvSab"
                                 onChange={handlesaveSab}/>
-                                <h1 className="inline-block mx-1">+
+                                <h1 className="inline-block mx-1 w-5 text-right">
                                 {sabSave}
                                 </h1>
                             </div>
@@ -731,7 +732,7 @@ export default function rotas(){
                             <div className="inline-block float-right my-1">
                                 <input type='checkbox' className='cursor-pointer' name="SalvInt"
                                 onChange={handlesaveInt}/>
-                                <h1 className="inline-block mx-1">+
+                                <h1 className="inline-block mx-1 w-5 text-right">
                                 {intSave}
                                 </h1>
                             </div>
@@ -741,7 +742,7 @@ export default function rotas(){
                             <div className="inline-block float-right my-1">
                                 <input type='checkbox' className='cursor-pointer' name="SalvCar"
                                 onChange={handlesaveCar}/>
-                                <h1 className="inline-block mx-1">+
+                                <h1 className="inline-block mx-1 w-5 text-right">
                                 {carSave}
                                 </h1>
                             </div>
