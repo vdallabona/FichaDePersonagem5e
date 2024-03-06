@@ -29,10 +29,10 @@ export default function rotas(){
 
     const [habProef, setHabProef] = useState(false);
     const [habExper, setHabExper] = useState(false);
-    const handleProef = (event) => {
+    const handleProef = (event:any) => {
        setHabProef(event.target.checked)
     }
-    const handleExper = (event) => {
+    const handleExper = (event:any) => {
         setHabExper(event.target.checked)
      }
      let acrobaciaHabilidade = dexNumb
@@ -47,10 +47,10 @@ export default function rotas(){
 
     const [habProefPres, setHabProefPres] = useState(false);
     const [habExperPres, setHabExperPres] = useState(false);
-    const handleProefPres = (event) => {
+    const handleProefPres = (event:any) => {
     setHabProefPres(event.target.checked)
     }
-    const handleExperPres = (event) => {
+    const handleExperPres = (event:any) => {
         setHabExperPres(event.target.checked)
     }
     let presdigitacaoHabilidade = dexNumb
@@ -65,10 +65,10 @@ export default function rotas(){
 
     const [habProefFurt, setHabProefFurt] = useState(false);
     const [habExperFurt, setHabExperFurt] = useState(false);
-    const handleProefFurt = (event) => {
+    const handleProefFurt = (event:any) => {
         setHabProefFurt(event.target.checked)
     }
-    const handleExperFurt = (event) => {
+    const handleExperFurt = (event:any) => {
         setHabExperFurt(event.target.checked)
     }
     let furtHabilidade = dexNumb
@@ -82,10 +82,10 @@ export default function rotas(){
 
     const [habProefAds, setHabProefAds] = useState(false);
     const [habExperAds, setHabExperAds] = useState(false);
-    const handleProefAds = (event) => {
+    const handleProefAds = (event:any) => {
         setHabProefAds(event.target.checked)
     }
-    const handleExperAds = (event) => {
+    const handleExperAds = (event:any) => {
         setHabExperAds(event.target.checked)
     }
     let adsHabilidade = sabNumb
@@ -99,10 +99,10 @@ export default function rotas(){
 
     const [habProefIntu, setHabProefIntu] = useState(false);
     const [habExperIntu, setHabExperIntu] = useState(false);
-    const handleProefIntu = (event) => {
+    const handleProefIntu = (event:any) => {
         setHabProefIntu(event.target.checked)
     }
-    const handleExperIntu = (event) => {
+    const handleExperIntu = (event:any) => {
         setHabExperIntu(event.target.checked)
         }
         let intuHabilidade = sabNumb
@@ -116,10 +116,10 @@ export default function rotas(){
 
     const [habProefMeds, setHabProefMeds] = useState(false);
     const [habExperMeds, setHabExperMeds] = useState(false);
-    const handleProefMeds = (event) => {
+    const handleProefMeds = (event:any) => {
         setHabProefMeds(event.target.checked)
     }
-    const handleExperMeds = (event) => {
+    const handleExperMeds = (event:any) => {
         setHabExperMeds(event.target.checked)
         }
         let medsHabilidade = sabNumb
@@ -133,10 +133,10 @@ export default function rotas(){
 
     const [habProefPerc, setHabProefPerc] = useState(false);
     const [habExperPerc, setHabExperPerc] = useState(false);
-    const handleProefPerc = (event) => {
+    const handleProefPerc = (event:any) => {
         setHabProefPerc(event.target.checked)
     }
-    const handleExperPerc = (event) => {
+    const handleExperPerc = (event:any) => {
         setHabExperPerc(event.target.checked)
         }
         let percHabilidade = sabNumb
@@ -150,10 +150,10 @@ export default function rotas(){
 
     const [habProefSobr, setHabProefSobr] = useState(false);
     const [habExperSobr, setHabExperSobr] = useState(false);
-    const handleProefSobr = (event) => {
+    const handleProefSobr = (event:any) => {
         setHabProefSobr(event.target.checked)
     }
-    const handleExperSobr = (event) => {
+    const handleExperSobr = (event:any) => {
         setHabExperSobr(event.target.checked)
         }
         let sobrHabilidade = sabNumb
@@ -167,10 +167,10 @@ export default function rotas(){
 
     const [habProefArc, setHabProefArc] = useState(false);
     const [habExperArc, setHabExperArc] = useState(false);
-    const handleProefArc = (event) => {
+    const handleProefArc = (event:any) => {
         setHabProefArc(event.target.checked)
     }
-    const handleExperArc = (event) => {
+    const handleExperArc = (event:any) => {
         setHabExperArc(event.target.checked)
         }
         let arcHabilidade = intNumb
@@ -184,10 +184,10 @@ export default function rotas(){
 
     const [habProefHist, setHabProefHist] = useState(false);
     const [habExperHist, setHabExperHist] = useState(false);
-    const handleProefHist = (event) => {
+    const handleProefHist = (event:any) => {
         setHabProefHist(event.target.checked)
     }
-    const handleExperHist = (event) => {
+    const handleExperHist = (event:any) => {
         setHabExperHist(event.target.checked)
         }
         let histHabilidade = intNumb
@@ -201,10 +201,10 @@ export default function rotas(){
 
     const [habProefInv, setHabProefInv] = useState(false);
     const [habExperInv, setHabExperInv] = useState(false);
-    const handleProefInv = (event) => {
+    const handleProefInv = (event:any) => {
         setHabProefInv(event.target.checked)
     }
-    const handleExperInv = (event) => {
+    const handleExperInv = (event:any) => {
         setHabExperInv(event.target.checked)
         }
         let invHabilidade = intNumb
@@ -218,10 +218,10 @@ export default function rotas(){
 
     const [habProefNat, setHabProefNat] = useState(false);
     const [habExperNat, setHabExperNat] = useState(false);
-    const handleProefNat = (event) => {
+    const handleProefNat = (event:any) => {
         setHabProefNat(event.target.checked)
     }
-    const handleExperNat = (event) => {
+    const handleExperNat = (event:any) => {
         setHabExperNat(event.target.checked)
     }
     let natHabilidade = intNumb
@@ -235,10 +235,10 @@ export default function rotas(){
 
     const [habProefRel, setHabProefRel] = useState(false);
     const [habExperRel, setHabExperRel] = useState(false);
-    const handleProefRel = (event) => {
+    const handleProefRel = (event:any) => {
         setHabProefRel(event.target.checked)
     }
-    const handleExperRel = (event) => {
+    const handleExperRel = (event:any) => {
         setHabExperRel(event.target.checked)
     }
     let relHabilidade = intNumb
@@ -252,10 +252,10 @@ export default function rotas(){
 
     const [habProefAtl, setHabProefAtl] = useState(false);
     const [habExperAtl, setHabExperAtl] = useState(false);
-    const handleProefAtl = (event) => {
+    const handleProefAtl = (event:any) => {
         setHabProefAtl(event.target.checked)
     }
-    const handleExperAtl = (event) => {
+    const handleExperAtl = (event:any) => {
         setHabExperAtl(event.target.checked)
     }
     let atlHabilidade = forcNumb
@@ -269,10 +269,10 @@ export default function rotas(){
 
     const [habProefEnga, setHabProefEnga] = useState(false);
     const [habExperEnga, setHabExperEnga] = useState(false);
-    const handleProefEnga = (event) => {
+    const handleProefEnga = (event:any) => {
         setHabProefEnga(event.target.checked)
     }
-    const handleExperEnga = (event) => {
+    const handleExperEnga = (event:any) => {
         setHabExperEnga(event.target.checked)
     }
     let engaHabilidade = carNumb
@@ -286,10 +286,10 @@ export default function rotas(){
 
     const [habProefInti, setHabProefInti] = useState(false);
     const [habExperInti, setHabExperInti] = useState(false);
-    const handleProefInti = (event) => {
+    const handleProefInti = (event:any) => {
         setHabProefInti(event.target.checked)
     }
-    const handleExperInti = (event) => {
+    const handleExperInti = (event:any) => {
         setHabExperInti(event.target.checked)
     }
     let intiHabilidade = carNumb
@@ -303,10 +303,10 @@ export default function rotas(){
 
     const [habProefPerf, setHabProefPerf] = useState(false);
     const [habExperPerf, setHabExperPerf] = useState(false);
-    const handleProefPerf = (event) => {
+    const handleProefPerf = (event:any) => {
         setHabProefPerf(event.target.checked)
     }
-    const handleExperPerf = (event) => {
+    const handleExperPerf = (event:any) => {
         setHabExperPerf(event.target.checked)
     }
     let perfHabilidade = carNumb
@@ -320,10 +320,10 @@ export default function rotas(){
 
     const [habProefPers, setHabProefPers] = useState(false);
     const [habExperPers, setHabExperPers] = useState(false);
-    const handleProefPers = (event) => {
+    const handleProefPers = (event:any) => {
         setHabProefPers(event.target.checked)
     }
-    const handleExperPers = (event) => {
+    const handleExperPers = (event:any) => {
         setHabExperPers(event.target.checked)
     }
     let persHabilidade = carNumb
@@ -336,7 +336,7 @@ export default function rotas(){
     }
 
     const [saveProefForc, setsaveProefForc] = useState(false);
-    const handlesaveForc = (event) => {
+    const handlesaveForc = (event:any) => {
         setsaveProefForc(event.target.checked)
     }
     let forcSave = forcNumb
@@ -347,7 +347,7 @@ export default function rotas(){
     }
 
     const [saveProefDex, setsaveProefDex] = useState(false);
-    const handlesaveDex = (event) => {
+    const handlesaveDex = (event:any) => {
         setsaveProefDex(event.target.checked)
     }
     let dexSave = dexNumb
@@ -358,7 +358,7 @@ export default function rotas(){
     }
 
     const [saveProefCon, setsaveProefCon] = useState(false);
-    const handlesaveCon = (event) => {
+    const handlesaveCon = (event:any) => {
         setsaveProefCon(event.target.checked)
     }
     let conSave = conNumb
@@ -369,7 +369,7 @@ export default function rotas(){
     }
 
     const [saveProefSab, setsaveProefSab] = useState(false);
-    const handlesaveSab = (event) => {
+    const handlesaveSab = (event:any) => {
         setsaveProefSab(event.target.checked)
     }
     let sabSave = sabNumb
@@ -380,7 +380,7 @@ export default function rotas(){
     }
 
     const [saveProefInt, setsaveProefInt] = useState(false);
-    const handlesaveInt = (event) => {
+    const handlesaveInt = (event:any) => {
         setsaveProefInt(event.target.checked)
     }
     let intSave = intNumb
@@ -391,7 +391,7 @@ export default function rotas(){
     }
 
     const [saveProefCar, setsaveProefCar] = useState(false);
-    const handlesaveCar = (event) => {
+    const handlesaveCar = (event:any) => {
         setsaveProefCar(event.target.checked)
     }
     let carSave = carNumb
@@ -410,51 +410,51 @@ export default function rotas(){
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Força:</h1>
                     <input className="atributoInput" name="atributoFor" placeholder="10"
-                    required type="number"
-                    onChange={(e) => setFor(e.target.value)}/>
+                    required type="number" value={forc}
+                    onChange={(e) => setFor(e.target.valueAsNumber)}/>
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Destreza:</h1>
                     <input className="atributoInput" name="atributoDex" placeholder="10"
-                    required
-                    onChange={(e) => setDex(e.target.value)}
+                    required type="number" value={dex}
+                    onChange={(e) => setDex(e.target.valueAsNumber)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Constituição:</h1>
                     <input className="atributoInput" name="atributoCon" placeholder="10"
-                    required type="number"
-                    onChange={(e) => setCon(e.target.value)}
+                    required type="number" value={con}
+                    onChange={(e) => setCon(e.target.valueAsNumber)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Sabedoria:</h1>
                     <input className="atributoInput" name="atributoSab" placeholder="10"
-                    required type="number"
-                    onChange={(e) => setSab(e.target.value)}
+                    required type="number" value={sab}
+                    onChange={(e) => setSab(e.target.valueAsNumber)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Inteligência:</h1>
                     <input className="atributoInput" name="atributoInt" placeholder="10"
-                    required type="number"
-                    onChange={(e) => setInt(e.target.value)}
+                    required type="number" value={int}
+                    onChange={(e) => setInt(e.target.valueAsNumber)}
                     />
                 </div>
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Carisma:</h1>
                     <input className="atributoInput" name="atributoCar" placeholder="10"
-                    required type="number"
-                    onChange={(e) => setCar(e.target.value)}
+                    required type="number" value={car}
+                    onChange={(e) => setCar(e.target.valueAsNumber)}
                     />
                 </div>
             </div>
             <div className="flex flex-wrap mx-auto w-fit">
                 <div className="w-56 mx-auto">
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Acrobatics:</h1>
+                        <h1 className="inline-block my-1">Acrobacia:</h1>
                         <div className="inline-block float-right my-1">
-                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAcro"
+                                <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAcro"
                             onChange={handleExper}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAcro"
                             onChange={handleProef}/>
@@ -464,9 +464,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Animal Handling:</h1>
+                        <h1 className="inline-block my-1">Adestrar animais:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAds"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAds"
                             onChange={handleExperAds}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAds"
                             onChange={handleProefAds}/>
@@ -476,9 +476,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Arcana:</h1>
+                        <h1 className="inline-block my-1">Arcanismo:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefArc"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefArc"
                             onChange={handleExperArc}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpArc"
                             onChange={handleProefArc}/>
@@ -488,9 +488,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Athletics:</h1>
+                        <h1 className="inline-block my-1">Atletismo:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAtl"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefAtl"
                             onChange={handleExperAtl}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpAtl"
                             onChange={handleProefAtl}/>
@@ -500,9 +500,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Deception:</h1>
+                        <h1 className="inline-block my-1">Enganação:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefEnga"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefEnga"
                             onChange={handleExperEnga}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpEnga"
                             onChange={handleProefEnga}/>
@@ -512,9 +512,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">History:</h1>
+                        <h1 className="inline-block my-1">História:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefHist"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefHist"
                             onChange={handleExperHist}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpHist"
                             onChange={handleProefHist}/>
@@ -524,9 +524,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Insight:</h1>
+                        <h1 className="inline-block my-1">Perspicácia:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefIntu"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefIntu"
                             onChange={handleExperIntu}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpIntu"
                             onChange={handleProefIntu}/>
@@ -536,9 +536,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Intimidation:</h1>
+                        <h1 className="inline-block my-1">Intimidação:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefInti"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefInti"
                             onChange={handleExperInti}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpInti"
                             onChange={handleProefInti}/>
@@ -548,9 +548,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Investigation:</h1>
+                        <h1 className="inline-block my-1">Investigação:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefInv"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefInv"
                             onChange={handleExperInv}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpInv"
                             onChange={handleProefInv}/>
@@ -560,9 +560,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Medicine:</h1>
+                        <h1 className="inline-block my-1">Medicina:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefMeds"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefMeds"
                             onChange={handleExperMeds}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpMeds"
                             onChange={handleProefMeds}/>
@@ -572,9 +572,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Nature:</h1>
+                        <h1 className="inline-block my-1">Natureza:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefNat"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefNat"
                             onChange={handleExperNat}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpNat"
                             onChange={handleProefNat}/>
@@ -584,9 +584,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Perception:</h1>
+                        <h1 className="inline-block my-1">Percepção:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPerc"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPerc"
                             onChange={handleExperPerc}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPerc"
                             onChange={handleProefPerc}/>
@@ -598,7 +598,7 @@ export default function rotas(){
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Performance:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPerf"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPerf"
                             onChange={handleExperPerf}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPerf"
                             onChange={handleProefPerf}/>
@@ -608,9 +608,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Persuasion:</h1>
+                        <h1 className="inline-block my-1">Persuasão:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPers"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPers"
                             onChange={handleExperPers}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPers"
                             onChange={handleProefPers}/>
@@ -620,9 +620,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Religion:</h1>
+                        <h1 className="inline-block my-1">Religião:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefRel"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefRel"
                             onChange={handleExperRel}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpRel"
                             onChange={handleProefRel}/>
@@ -632,9 +632,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Sleight of Hand:</h1>
+                        <h1 className="inline-block my-1">Presdigitação:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPres"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefPres"
                             onChange={handleExperPres}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpPres"
                             onChange={handleProefPres}/>
@@ -644,9 +644,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Stealth:</h1>
+                        <h1 className="inline-block my-1">Furtividade:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefFurt"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefFurt"
                             onChange={handleExperFurt}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpFurt"
                             onChange={handleProefFurt}/>
@@ -656,9 +656,9 @@ export default function rotas(){
                         </div>
                     </div>
                     <div className="caixaHabilidade">
-                        <h1 className="inline-block my-1">Survival:</h1>
+                        <h1 className="inline-block my-1">Sobrevivência:</h1>
                         <div className="inline-block float-right my-1">
-                        <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefSobr"
+                            <input type='checkbox' className='mx-2 z-10 w-5 cursor-pointer' name="habProefSobr"
                             onChange={handleExperSobr}/>
                             <input type='checkbox' className='z-20 top-1 left-40 absolute cursor-pointer' name="habExpSobr"
                             onChange={handleProefSobr}/>
@@ -672,7 +672,7 @@ export default function rotas(){
                     <div className="shadow-md border-2 mx-auto border-lago w-28 bg-white rounded-full top-0 relative my-4 md:my-10 text-center">
                             <h1>Bônus de Proeficiência:</h1>
                             <input type="number" className="outline-none w-12 h-6 text-center hover:bg-slate-200 mx-auto rounded-full" name="proef" placeholder="2"
-                            onChange={(e) => setProefNumber(e.target.value)}/>
+                            onChange={(e) => setProefNumber(e.target.valueAsNumber)} value={proef}/>
                     </div>
                     <div className="text-center mx-auto my-auto w-48 py-3 md:py-10">
                         <div className="shadow-md border-2 mx-auto border-lago w-16 bg-white rounded-full">
@@ -753,11 +753,11 @@ export default function rotas(){
             <div className="container mx-auto text-center">
                 <div className="shadow-md bg-white border-2 border-lago m-2 border-box inline-block rounded p-2">
                         <h1 className="md:text-lg text-center">Habilidades de Classe:</h1>
-                        <textarea className="bg-blue-50 rounded resize-none" rows="8" cols="40" name="habilidadesDeClasse"/>
+                        <textarea className="bg-blue-50 rounded resize-none" rows={8} cols={40} name="habilidadesDeClasse"/>
                 </div>
                 <div className="shadow-md bg-white border-2 border-lago m-2 border-box inline-block rounded p-2">
                         <h1 className="md:text-lg text-center">Outras Habilidades:</h1>
-                        <textarea className="bg-blue-50 rounded resize-none" rows="8" cols="40" name="outrasHabilidades"/>
+                        <textarea className="bg-blue-50 rounded resize-none" rows={8} cols={40} name="outrasHabilidades"/>
                 </div>
             </div>
             <footer className="invisible h-40">Vinícius Liberato Cidral Dallabona</footer>
