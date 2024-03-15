@@ -17,15 +17,57 @@ export default function rotas(){
 
     const [proefNumber, setProefNumber] = useState(2)
     let proef = proefNumber * 1
-    let Armadura = 10;
 
-    //formula para calcular modificadores de atributo do DnD (com arredondamento)
+    //formula para calcular modificadores de atributo do DnD
     let forcNumb = Math.floor((forc - 10) / 2)
     let dexNumb = Math.floor((dex - 10) / 2)
     let conNumb = Math.floor((con - 10) / 2)
     let sabNumb = Math.floor((sab - 10) / 2)
     let intNumb = Math.floor((int - 10) / 2)
     let carNumb = Math.floor((car - 10) / 2)
+
+
+
+    let ArmaduraNumber = 90
+    const [tipoArmadura, setArmadura] = useState('sArmadura')
+    
+
+    switch (tipoArmadura) {
+
+        case 'couro':
+            ArmaduraNumber = 11 + dexNumb
+            break;
+
+        case 'couroBatido':
+            ArmaduraNumber = 12 + dexNumb
+            break;
+
+        case 'placas':
+            if(dexNumb > 2){
+                ArmaduraNumber = 16 + 2
+            }else{
+                ArmaduraNumber = 16 + dexNumb
+            }
+            break;
+
+        case 'completa':
+            ArmaduraNumber = 18
+            break;
+
+        case 'sArmadura':
+            ArmaduraNumber = 10 + dexNumb
+            break;
+      }
+
+        const [escudo, setEscudo] = useState(false);
+        const handleEscudo = (event:any) => {
+            setEscudo(event.target.checked)
+        }
+
+        if(escudo){
+            ArmaduraNumber = ArmaduraNumber + 2
+        }
+
 
     const [habProef, setHabProef] = useState(false);
     const [habExper, setHabExper] = useState(false);
@@ -36,7 +78,7 @@ export default function rotas(){
         setHabExper(event.target.checked)
      }
      let acrobaciaHabilidade = dexNumb
-     if(habExper == true){
+     if(habExper == true && habProef == true){
         acrobaciaHabilidade = proef * 2 + dexNumb
      }else if(habProef){
         acrobaciaHabilidade = dexNumb + proef
@@ -54,7 +96,7 @@ export default function rotas(){
         setHabExperPres(event.target.checked)
     }
     let presdigitacaoHabilidade = dexNumb
-    if(habExperPres == true){
+    if(habExperPres == true && habProefPres == true){
     presdigitacaoHabilidade = proef * 2 + dexNumb
     }else if(habProefPres){
     presdigitacaoHabilidade = dexNumb + proef
@@ -72,7 +114,7 @@ export default function rotas(){
         setHabExperFurt(event.target.checked)
     }
     let furtHabilidade = dexNumb
-    if(habExperFurt == true){
+    if(habExperFurt == true && habProefFurt == true){
         furtHabilidade = proef * 2 + dexNumb
     }else if(habProefFurt){
         furtHabilidade = dexNumb + proef
@@ -89,7 +131,7 @@ export default function rotas(){
         setHabExperAds(event.target.checked)
     }
     let adsHabilidade = sabNumb
-    if(habExperAds == true){
+    if(habExperAds == true && habProefAds == true){
         adsHabilidade = proef * 2 + sabNumb
     }else if(habProefAds){
         adsHabilidade = sabNumb + proef
@@ -106,7 +148,7 @@ export default function rotas(){
         setHabExperIntu(event.target.checked)
         }
         let intuHabilidade = sabNumb
-        if(habExperIntu == true){
+        if(habExperIntu == true && habProefIntu == true){
         intuHabilidade = proef * 2 + sabNumb
         }else if(habProefIntu){
         intuHabilidade = sabNumb + proef
@@ -123,7 +165,7 @@ export default function rotas(){
         setHabExperMeds(event.target.checked)
         }
         let medsHabilidade = sabNumb
-        if(habExperMeds == true){
+        if(habExperMeds == true && habProefMeds == true){
         medsHabilidade = proef * 2 + sabNumb
         }else if(habProefMeds){
         medsHabilidade = sabNumb + proef
@@ -140,7 +182,7 @@ export default function rotas(){
         setHabExperPerc(event.target.checked)
         }
         let percHabilidade = sabNumb
-        if(habExperPerc == true){
+        if(habExperPerc == true && habProefPerc == true){
         percHabilidade = proef * 2 + sabNumb
         }else if(habProefPerc){
         percHabilidade = sabNumb + proef
@@ -157,7 +199,7 @@ export default function rotas(){
         setHabExperSobr(event.target.checked)
         }
         let sobrHabilidade = sabNumb
-        if(habExperSobr == true){
+        if(habExperSobr == true && habProefSobr == true){
         sobrHabilidade = proef * 2 + sabNumb
         }else if(habProefSobr){
         sobrHabilidade = sabNumb + proef
@@ -174,7 +216,7 @@ export default function rotas(){
         setHabExperArc(event.target.checked)
         }
         let arcHabilidade = intNumb
-        if(habExperArc == true){
+        if(habExperArc == true && habProefArc == true){
         arcHabilidade = proef * 2 + intNumb
         }else if(habProefArc){
         arcHabilidade = intNumb + proef
@@ -191,7 +233,7 @@ export default function rotas(){
         setHabExperHist(event.target.checked)
         }
         let histHabilidade = intNumb
-        if(habExperHist == true){
+        if(habExperHist == true && habProefHist == true){
         histHabilidade = proef * 2 + intNumb
         }else if(habProefHist){
         histHabilidade = intNumb + proef
@@ -208,7 +250,7 @@ export default function rotas(){
         setHabExperInv(event.target.checked)
         }
         let invHabilidade = intNumb
-        if(habExperInv == true){
+        if(habExperInv == true && habProefInv == true){
         invHabilidade = proef * 2 + intNumb
         }else if(habProefInv){
         invHabilidade = intNumb + proef
@@ -225,7 +267,7 @@ export default function rotas(){
         setHabExperNat(event.target.checked)
     }
     let natHabilidade = intNumb
-    if(habExperNat == true){
+    if(habExperNat == true && habProefNat == true){
         natHabilidade = proef * 2 + intNumb
     }else if(habProefNat){
         natHabilidade = intNumb + proef
@@ -242,7 +284,7 @@ export default function rotas(){
         setHabExperRel(event.target.checked)
     }
     let relHabilidade = intNumb
-    if(habExperRel == true){
+    if(habExperRel == true && habProefRel == true){
         relHabilidade = proef * 2 + intNumb
     }else if(habProefRel){
         relHabilidade = intNumb + proef
@@ -259,7 +301,7 @@ export default function rotas(){
         setHabExperAtl(event.target.checked)
     }
     let atlHabilidade = forcNumb
-    if(habExperAtl == true){
+    if(habExperAtl == true && habProefAtl == true){
         atlHabilidade = proef * 2 + forcNumb
     }else if(habProefAtl){
         atlHabilidade = forcNumb + proef
@@ -276,7 +318,7 @@ export default function rotas(){
         setHabExperEnga(event.target.checked)
     }
     let engaHabilidade = carNumb
-    if(habExperEnga == true){
+    if(habExperEnga == true && habProefEnga == true){
         engaHabilidade = proef * 2 + carNumb
     }else if(habProefEnga){
         engaHabilidade = carNumb + proef
@@ -293,7 +335,7 @@ export default function rotas(){
         setHabExperInti(event.target.checked)
     }
     let intiHabilidade = carNumb
-    if(habExperInti == true){
+    if(habExperInti == true && habProefInti == true){
         intiHabilidade = proef * 2 + carNumb
     }else if(habProefInti){
         intiHabilidade = carNumb + proef
@@ -310,7 +352,7 @@ export default function rotas(){
         setHabExperPerf(event.target.checked)
     }
     let perfHabilidade = carNumb
-    if(habExperPerf == true){
+    if(habExperPerf == true && habProefPerf == true){
         perfHabilidade = proef * 2 + carNumb
     }else if(habProefPerf){
         perfHabilidade = carNumb + proef
@@ -327,7 +369,7 @@ export default function rotas(){
         setHabExperPers(event.target.checked)
     }
     let persHabilidade = carNumb
-    if(habExperPers == true){
+    if(habExperPers == true && habProefPers == true){
         persHabilidade = proef * 2 + carNumb
     }else if(habProefPers){
         persHabilidade = carNumb + proef
@@ -406,7 +448,7 @@ export default function rotas(){
             <div className="top-0 left-0 text-center w-60 h-4">
                 <h1 className="text-black bg-lago">ficha de personagem</h1>
             </div>
-            <div className="container mx-auto my-3 text-center">
+            <div className="container mx-auto my-3 text-center md:my-10">
                 <div className="caixaAtributo">
                     <h1 className="md:text-lg">Força:</h1>
                     <input className="atributoInput" name="atributoFor" placeholder="10"
@@ -449,7 +491,7 @@ export default function rotas(){
                     />
                 </div>
             </div>
-            <div className="flex flex-wrap mx-auto w-fit">
+            <div className="flex flex-wrap mx-auto w-fit md:my-20">
                 <div className="w-56 mx-auto">
                     <div className="caixaHabilidade">
                         <h1 className="inline-block my-1">Acrobacia:</h1>
@@ -674,18 +716,32 @@ export default function rotas(){
                             <input type="number" className="outline-none w-12 h-6 text-center hover:bg-slate-200 mx-auto rounded-full" name="proef" placeholder="2"
                             onChange={(e) => setProefNumber(e.target.valueAsNumber)} value={proef}/>
                     </div>
-                    <div className="text-center mx-auto my-auto w-48 py-3 md:py-10">
+                    <div className="text-center mx-auto my-auto w-56 py-3 md:py-3">
+                        <div className="shadow-md border-2 mx-auto border-lago w-48 mb-2 bg-white rounded">
+                            <h1 className="text-lg">Armadura equipada:</h1>
+                            <select name="armaduraEquip" className="text-xs"
+                            onChange={(e) => setArmadura(e.target.value)} value={tipoArmadura}>
+                                <option value={'sArmadura'}>Sem armadura</option>
+                                <option value={'couro'}>Armadura de couro</option>
+                                <option value={'couroBatido'}>Armadura de couro batido</option>
+                                <option value={'placas'}>Armadura de placas</option>
+                                <option value={'completa'}>Armadura completa</option>
+                            </select>
+                            <h1 className="inline-block mx-2 text-sm">Escudo</h1>
+                            <input type='checkbox' className='cursor-pointer' name="Escudo"
+                                onChange={handleEscudo}/>
+                        </div>
                         <div className="shadow-md border-2 mx-auto border-lago w-16 bg-white rounded-full">
                             <h1 className="text-xl">CA:</h1>
-                            <h1 className="text-lg">{Armadura + dexNumb}</h1>
+                            <h1 className="text-lg">{ArmaduraNumber}</h1>
                         </div>
-                        <div className="shadow-md mx-auto border-2 border-lago w-32 mt-4 bg-white rounded-md divide-y-2 divide-slate-300 divide-dashed">
+                        <div className="shadow-md mx-auto border-2 border-lago w-32 mt-2 bg-white rounded-md divide-y-2 divide-slate-300 divide-dashed">
                             <h1 className="text-xl w-20 inline-block">PV</h1>
                             <h1 className="text-lg w-20 inline-block">max: 30</h1>
                             <input className="outline-none w-20 text-center hover:bg-slate-200" placeholder="PV atual" name="VidaAtual"/>
                         </div>
                     </div>
-                    <div className="mx-auto w-48 md:my-10">
+                    <div className="mx-auto w-48 my-5 md:my-5">
                         <p className="text-black text-center text-2xl mt-2 md:mt-5">Salvaguarda</p>
                         <div className="caixaHabilidade">
                             <h1 className="inline-block my-1">Força:</h1>
@@ -750,12 +806,12 @@ export default function rotas(){
                     </div>
                 </div>
             </div>
-            <div className="container mx-auto text-center">
+            <div className="container mx-auto text-center md:my-10">
                 <div className="shadow-md bg-white border-2 border-lago m-2 border-box inline-block rounded p-2">
                         <h1 className="md:text-lg text-center">Habilidades de Classe:</h1>
                         <textarea className="bg-blue-50 rounded resize-none" rows={8} cols={40} name="habilidadesDeClasse"/>
                 </div>
-                <div className="shadow-md bg-white border-2 border-lago m-2 border-box inline-block rounded p-2">
+                <div className="shadow-md bg-white border-2 border-lago m-2 border-box inline-block rounded p-2 md:my-10">
                         <h1 className="md:text-lg text-center">Outras Habilidades:</h1>
                         <textarea className="bg-blue-50 rounded resize-none" rows={8} cols={40} name="outrasHabilidades"/>
                 </div>
