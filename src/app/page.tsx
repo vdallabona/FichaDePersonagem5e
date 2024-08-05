@@ -444,6 +444,7 @@ export default function rotas(){
     }
 
     return(
+    <>
         <div className="bg-gradient-radial from-red-300 to-red-900 bg-fixed">
             <div className="top-0 left-0 text-center w-60 h-4">
                 <h1 className="text-black bg-lago">ficha de personagem</h1>
@@ -818,5 +819,6 @@ export default function rotas(){
             </div>
             <footer className="invisible h-40">Vinícius Liberato Cidral Dallabona</footer>
         </div>
+        </>
     )
 }
