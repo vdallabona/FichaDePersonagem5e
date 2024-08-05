@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 import { useState } from "react"
 
 
-export default function rotas(){
+export default function useRotas(){
 
     const [forc, setFor] = useState(10)
     const [dex, setDex] = useState(10)
