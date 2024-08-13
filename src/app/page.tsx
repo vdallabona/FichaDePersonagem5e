@@ -100,6 +100,25 @@ export default function useRotas() {
         ArmaduraNumber = ArmaduraNumber + 2
     }
 
+//--------- TESTE ------------------- TESTE ----------------------------------- TESTE -------------------------------- TESTE ------------------------ TESTE ----------- TESTE ----------- TESTE ----------- TESTE -----------
+
+    const calcularHabilidade  = (
+        AtributoNumbUni: number,
+        proef: number,
+        habProef: boolean,
+        habExper: boolean
+    ): number => {
+        if (habExper && habProef) {
+            return proef * 2 + AtributoNumbUni;
+        } else if (habProef) {
+            return AtributoNumbUni + proef;
+        } else {
+            return AtributoNumbUni;
+        }
+    };
+
+//--------- TESTE ------------------- TESTE ----------------------------------- TESTE -------------------------------- TESTE ------------------------ TESTE ----------- TESTE ----------- TESTE ----------- TESTE -----------
+
     const [habProef, setHabProef] = useState(false);
     const [habExper, setHabExper] = useState(false);
     const handleProef = (event: any) => {
@@ -108,14 +127,7 @@ export default function useRotas() {
     const handleExper = (event: any) => {
         setHabExper(event.target.checked)
     }
-    let acrobaciaHabilidade = dexNumb
-    if (habExper == true && habProef == true) {
-        acrobaciaHabilidade = proef * 2 + dexNumb
-    } else if (habProef) {
-        acrobaciaHabilidade = dexNumb + proef
-    } else {
-        acrobaciaHabilidade = dexNumb
-    }
+    let acrobaciaHabilidade = calcularHabilidade(dexNumb, proef, habProef, habExper)
 
     const [habProefPres, setHabProefPres] = useState(false);
     const [habExperPres, setHabExperPres] = useState(false);
@@ -125,14 +137,7 @@ export default function useRotas() {
     const handleExperPres = (event: any) => {
         setHabExperPres(event.target.checked)
     }
-    let presdigitacaoHabilidade = dexNumb
-    if (habExperPres == true && habProefPres == true) {
-        presdigitacaoHabilidade = proef * 2 + dexNumb
-    } else if (habProefPres) {
-        presdigitacaoHabilidade = dexNumb + proef
-    } else {
-        presdigitacaoHabilidade = dexNumb
-    }
+    let presdigitacaoHabilidade = calcularHabilidade(dexNumb, proef, habProefPres, habExperPres)
 
     const [habProefFurt, setHabProefFurt] = useState(false);
     const [habExperFurt, setHabExperFurt] = useState(false);
@@ -142,14 +147,7 @@ export default function useRotas() {
     const handleExperFurt = (event: any) => {
         setHabExperFurt(event.target.checked)
     }
-    let furtHabilidade = dexNumb
-    if (habExperFurt == true && habProefFurt == true) {
-        furtHabilidade = proef * 2 + dexNumb
-    } else if (habProefFurt) {
-        furtHabilidade = dexNumb + proef
-    } else {
-        furtHabilidade = dexNumb
-    }
+    let furtHabilidade = calcularHabilidade(dexNumb, proef, habProefFurt, habExperFurt)
 
     const [habProefAds, setHabProefAds] = useState(false);
     const [habExperAds, setHabExperAds] = useState(false);
@@ -159,14 +157,7 @@ export default function useRotas() {
     const handleExperAds = (event: any) => {
         setHabExperAds(event.target.checked)
     }
-    let adsHabilidade = sabNumb
-    if (habExperAds == true && habProefAds == true) {
-        adsHabilidade = proef * 2 + sabNumb
-    } else if (habProefAds) {
-        adsHabilidade = sabNumb + proef
-    } else {
-        adsHabilidade = sabNumb
-    }
+    let adsHabilidade = calcularHabilidade(sabNumb, proef, habProefAds, habExperAds)
 
     const [habProefIntu, setHabProefIntu] = useState(false);
     const [habExperIntu, setHabExperIntu] = useState(false);
@@ -176,14 +167,7 @@ export default function useRotas() {
     const handleExperIntu = (event: any) => {
         setHabExperIntu(event.target.checked)
     }
-    let intuHabilidade = sabNumb
-    if (habExperIntu == true && habProefIntu == true) {
-        intuHabilidade = proef * 2 + sabNumb
-    } else if (habProefIntu) {
-        intuHabilidade = sabNumb + proef
-    } else {
-        intuHabilidade = sabNumb
-    }
+    let intuHabilidade = calcularHabilidade(sabNumb, proef, habProefIntu, habExperIntu)
 
     const [habProefMeds, setHabProefMeds] = useState(false);
     const [habExperMeds, setHabExperMeds] = useState(false);
@@ -193,14 +177,7 @@ export default function useRotas() {
     const handleExperMeds = (event: any) => {
         setHabExperMeds(event.target.checked)
     }
-    let medsHabilidade = sabNumb
-    if (habExperMeds == true && habProefMeds == true) {
-        medsHabilidade = proef * 2 + sabNumb
-    } else if (habProefMeds) {
-        medsHabilidade = sabNumb + proef
-    } else {
-        medsHabilidade = sabNumb
-    }
+    let medsHabilidade = calcularHabilidade(sabNumb, proef, habProefMeds, habExperMeds)
 
     const [habProefPerc, setHabProefPerc] = useState(false);
     const [habExperPerc, setHabExperPerc] = useState(false);
@@ -210,14 +187,7 @@ export default function useRotas() {
     const handleExperPerc = (event: any) => {
         setHabExperPerc(event.target.checked)
     }
-    let percHabilidade = sabNumb
-    if (habExperPerc == true && habProefPerc == true) {
-        percHabilidade = proef * 2 + sabNumb
-    } else if (habProefPerc) {
-        percHabilidade = sabNumb + proef
-    } else {
-        percHabilidade = sabNumb
-    }
+    let percHabilidade = calcularHabilidade(sabNumb, proef, habProefPerc, habExperPerc)
 
     const [habProefSobr, setHabProefSobr] = useState(false);
     const [habExperSobr, setHabExperSobr] = useState(false);
@@ -227,14 +197,7 @@ export default function useRotas() {
     const handleExperSobr = (event: any) => {
         setHabExperSobr(event.target.checked)
     }
-    let sobrHabilidade = sabNumb
-    if (habExperSobr == true && habProefSobr == true) {
-        sobrHabilidade = proef * 2 + sabNumb
-    } else if (habProefSobr) {
-        sobrHabilidade = sabNumb + proef
-    } else {
-        sobrHabilidade = sabNumb
-    }
+    let sobrHabilidade = calcularHabilidade(sabNumb, proef, habProefSobr, habExperSobr)
 
     const [habProefArc, setHabProefArc] = useState(false);
     const [habExperArc, setHabExperArc] = useState(false);
@@ -244,14 +207,7 @@ export default function useRotas() {
     const handleExperArc = (event: any) => {
         setHabExperArc(event.target.checked)
     }
-    let arcHabilidade = intNumb
-    if (habExperArc == true && habProefArc == true) {
-        arcHabilidade = proef * 2 + intNumb
-    } else if (habProefArc) {
-        arcHabilidade = intNumb + proef
-    } else {
-        arcHabilidade = intNumb
-    }
+    let arcHabilidade = calcularHabilidade(intNumb, proef, habProefArc, habExperArc)
 
     const [habProefHist, setHabProefHist] = useState(false);
     const [habExperHist, setHabExperHist] = useState(false);
@@ -261,14 +217,7 @@ export default function useRotas() {
     const handleExperHist = (event: any) => {
         setHabExperHist(event.target.checked)
     }
-    let histHabilidade = intNumb
-    if (habExperHist == true && habProefHist == true) {
-        histHabilidade = proef * 2 + intNumb
-    } else if (habProefHist) {
-        histHabilidade = intNumb + proef
-    } else {
-        histHabilidade = intNumb
-    }
+    let histHabilidade = calcularHabilidade(intNumb, proef, habProefHist, habExperHist)
 
     const [habProefInv, setHabProefInv] = useState(false);
     const [habExperInv, setHabExperInv] = useState(false);
@@ -278,14 +227,7 @@ export default function useRotas() {
     const handleExperInv = (event: any) => {
         setHabExperInv(event.target.checked)
     }
-    let invHabilidade = intNumb
-    if (habExperInv == true && habProefInv == true) {
-        invHabilidade = proef * 2 + intNumb
-    } else if (habProefInv) {
-        invHabilidade = intNumb + proef
-    } else {
-        invHabilidade = intNumb
-    }
+    let invHabilidade = calcularHabilidade(intNumb, proef, habProefInv, habExperInv)
 
     const [habProefNat, setHabProefNat] = useState(false);
     const [habExperNat, setHabExperNat] = useState(false);
@@ -295,14 +237,7 @@ export default function useRotas() {
     const handleExperNat = (event: any) => {
         setHabExperNat(event.target.checked)
     }
-    let natHabilidade = intNumb
-    if (habExperNat == true && habProefNat == true) {
-        natHabilidade = proef * 2 + intNumb
-    } else if (habProefNat) {
-        natHabilidade = intNumb + proef
-    } else {
-        natHabilidade = intNumb
-    }
+    let natHabilidade = calcularHabilidade(intNumb, proef, habProefNat, habExperNat)
 
     const [habProefRel, setHabProefRel] = useState(false);
     const [habExperRel, setHabExperRel] = useState(false);
@@ -312,14 +247,7 @@ export default function useRotas() {
     const handleExperRel = (event: any) => {
         setHabExperRel(event.target.checked)
     }
-    let relHabilidade = intNumb
-    if (habExperRel == true && habProefRel == true) {
-        relHabilidade = proef * 2 + intNumb
-    } else if (habProefRel) {
-        relHabilidade = intNumb + proef
-    } else {
-        relHabilidade = intNumb
-    }
+    let relHabilidade = calcularHabilidade(intNumb, proef, habProefRel, habExperRel)
 
     const [habProefAtl, setHabProefAtl] = useState(false);
     const [habExperAtl, setHabExperAtl] = useState(false);
@@ -329,14 +257,7 @@ export default function useRotas() {
     const handleExperAtl = (event: any) => {
         setHabExperAtl(event.target.checked)
     }
-    let atlHabilidade = forcNumb
-    if (habExperAtl == true && habProefAtl == true) {
-        atlHabilidade = proef * 2 + forcNumb
-    } else if (habProefAtl) {
-        atlHabilidade = forcNumb + proef
-    } else {
-        atlHabilidade = forcNumb
-    }
+    let atlHabilidade = calcularHabilidade(forcNumb, proef, habProefAtl, habExperAtl)
 
     const [habProefEnga, setHabProefEnga] = useState(false);
     const [habExperEnga, setHabExperEnga] = useState(false);
@@ -346,14 +267,7 @@ export default function useRotas() {
     const handleExperEnga = (event: any) => {
         setHabExperEnga(event.target.checked)
     }
-    let engaHabilidade = carNumb
-    if (habExperEnga == true && habProefEnga == true) {
-        engaHabilidade = proef * 2 + carNumb
-    } else if (habProefEnga) {
-        engaHabilidade = carNumb + proef
-    } else {
-        engaHabilidade = carNumb
-    }
+    let engaHabilidade = calcularHabilidade(carNumb, proef, habProefEnga, habExperEnga)
 
     const [habProefInti, setHabProefInti] = useState(false);
     const [habExperInti, setHabExperInti] = useState(false);
@@ -363,14 +277,7 @@ export default function useRotas() {
     const handleExperInti = (event: any) => {
         setHabExperInti(event.target.checked)
     }
-    let intiHabilidade = carNumb
-    if (habExperInti == true && habProefInti == true) {
-        intiHabilidade = proef * 2 + carNumb
-    } else if (habProefInti) {
-        intiHabilidade = carNumb + proef
-    } else {
-        intiHabilidade = carNumb
-    }
+    let intiHabilidade = calcularHabilidade(carNumb, proef, habProefInti, habExperInti)
 
     const [habProefPerf, setHabProefPerf] = useState(false);
     const [habExperPerf, setHabExperPerf] = useState(false);
@@ -380,14 +287,7 @@ export default function useRotas() {
     const handleExperPerf = (event: any) => {
         setHabExperPerf(event.target.checked)
     }
-    let perfHabilidade = carNumb
-    if (habExperPerf == true && habProefPerf == true) {
-        perfHabilidade = proef * 2 + carNumb
-    } else if (habProefPerf) {
-        perfHabilidade = carNumb + proef
-    } else {
-        perfHabilidade = carNumb
-    }
+    let perfHabilidade = calcularHabilidade(carNumb, proef, habProefPerf, habExperPerf)
 
     const [habProefPers, setHabProefPers] = useState(false);
     const [habExperPers, setHabExperPers] = useState(false);
@@ -397,14 +297,7 @@ export default function useRotas() {
     const handleExperPers = (event: any) => {
         setHabExperPers(event.target.checked)
     }
-    let persHabilidade = carNumb
-    if (habExperPers == true && habProefPers == true) {
-        persHabilidade = proef * 2 + carNumb
-    } else if (habProefPers) {
-        persHabilidade = carNumb + proef
-    } else {
-        persHabilidade = carNumb
-    }
+    let persHabilidade = calcularHabilidade(carNumb, proef, habProefPers, habExperPers)
 
     const [saveProefForc, setsaveProefForc] = useState(false);
     const handlesaveForc = (event: any) => {
